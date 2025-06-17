@@ -178,6 +178,7 @@
             font-weight: 600;
             letter-spacing: 0.04em;
             box-shadow: 0 2px 12px 0 rgba(59,130,246,0.10);
+            margin-top: 1.2rem;
         }
 
         .cta-button:hover {
@@ -326,6 +327,7 @@
             border-radius: 4px;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            margin-top: 1.2rem;
         }
 
         .project-link:hover {
@@ -356,6 +358,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
+        }
+
+        @media (min-width: 1100px) {
+            .projects-grid .wide-card {
+                grid-column: span 2;
+            }
         }
 
         .competencies-section {
@@ -471,6 +479,7 @@
 
         .project-card h3 {
             color: var(--accent2);
+            margin-bottom: 1.2rem;
         }
 
         .project-card ul {
@@ -641,6 +650,19 @@
     <section id="projects" class="container fade-in-section slide-right anchor-offset" style="padding: 40px 0;">
         <h2 style="color:#64ffda; margin-bottom: 2rem;">Projects</h2>
         <div class="projects-grid" style="color:#8892b0;">
+            <div class="project-card wide-card">
+                <h3 style="color:#fff;">QuillBot Flow</h3>
+                <div style="color:#b8b8d1; margin-bottom: 1rem;">
+                    <p>I spearheaded the development of QuillBot Flow, designing the initial prototype and building the user interface (UI) and user experience (UX) from the ground up. My focus was on creating an intuitive and collaborative writing environment that caters to diverse user needs.</p>
+                    <p>To make QuillBot Flow a comprehensive writing assistant, I seamlessly integrated advanced features such as Paraphrasing, Grammar Checking, and Citation Generation, allowing users to write, edit, and properly reference content within a single platform.</p>
+                    <p>For the rich text editing component, I leveraged TinyMCE's capabilities to enhance both the grammar checking and collaborative writing functionalities within QuillBot Flow. This integration ensured a robust, flexible, and user-friendly editing experience for our users.</p>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                    </a>
+                </div>
+            </div>
             <div class="project-card">
                 <h3 style="color:#fff;">CMS</h3>
                 <p>Developed a content management system (CMS) from scratch to facilitate website deployment and administration for multiple platforms. Achieved pixel-perfect web page rendering without reliance on external design frameworks.</p>
@@ -650,7 +672,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="project-card">
                 <h3 style="color:#fff;">Paraphrasing Tool (QuillBot)</h3>
                 <p>Designed and implemented intuitive and user-friendly interfaces (UI) and user experiences (UX) for various projects, enhancing user satisfaction and engagement. Managed and optimized content to ensure seamless navigation and engaging user experience.</p>
@@ -660,7 +681,31 @@
                     </a>
                 </div>
             </div>
-
+            <div class="project-card wide-card">
+                <h3 style="color:#fff;">Citation Generator</h3>
+                <div style="color:#b8b8d1; margin-bottom: 1rem;">
+                    <p>Developed and implemented a user-friendly and visually aesthetic Citation Generator user interface (UI) and user experience (UX) from inception to deployment.</p>
+                    <p>Developed an API for seamless integration with other applications, leveraging Elasticsearch for efficient and scalable search functionality.</p>
+                    <p>Successfully implemented data ingestion pipelines utilizing Apache Beam, ensuring efficient and reliable data processing for the citation generation process.</p>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                    </a>
+                </div>
+            </div>
+            <div class="project-card wide-card">
+                <h3 style="color:#fff;">Website Internationalization</h3>
+                <div style="color:#b8b8d1; margin-bottom: 1rem;">
+                    <p>Successfully implemented website internationalization (i18n) to support multiple languages and enhance user experience for a global audience.</p>
+                    <p>Developed and integrated custom utility functions to facilitate seamless language switching, content localization, and overall website accessibility for diverse user groups.</p>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                    </a>
+                </div>
+            </div>
             <div class="project-card">
                 <h3 style="color:#fff;">Grammar Checker (QuillBot)</h3>
                 <p>Developed a fully functional grammar checker application from scratch, demonstrating proficiency in algorithm design and natural language processing. Created a user-friendly and visually appealing UI/UX design, enhancing product usability and user satisfaction.</p>
@@ -670,7 +715,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="project-card">
                 <h3 style="color:#fff;">Big Data Processing and Elasticsearch</h3>
                 <p>Designed and implemented high-performance stream and batch processing pipelines using Apache Beam, processing and storing over 160 million JSON records into Elasticsearch for advanced analytics and search capabilities.</p>
@@ -680,54 +724,12 @@
                     </a>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card wide-card">
                 <h3 style="color:#fff;">Ascend LOS/LMS & Android Apps</h3>
                 <p>Contributed to the development of Ascend Origination System (AOS) and Ascend Management System (AMS), designed to optimize loan processing workflows for financial institutions. Developed Android apps for both customers and staff to streamline loan application and management processes.</p>
                 <div class="project-links">
                     <a href="https://play.google.com/store/apps/details?id=com.ascend.los" target="_blank" class="project-link">
                         <i class="fab fa-google-play"></i> Play Store
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3 style="color:#fff;">Co-Writing</h3>
-                <ul style="color:#8892b0; margin-bottom: 1rem; padding-left: 1.2em;">
-                    <li>Spearheaded the development of a Co-Writing tool, creating the initial prototype, user interface (UI), and user experience (UX) from scratch.</li>
-                    <li>Enhanced the Co-Writing tool by integrating Paraphrasing, Grammar Checking, and Citation Generation functionalities, creating a comprehensive writing assistant.</li>
-                    <li>Contributed to the open-source TinyMCE project, leveraging the platform's capabilities to enhance grammar checking and co-writing features within the project.</li>
-                </ul>
-                <div class="project-links">
-                    <a href="#" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Visit Site
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3 style="color:#fff;">Citation Generator</h3>
-                <ul style="color:#8892b0; margin-bottom: 1rem; padding-left: 1.2em;">
-                    <li>Developed and implemented a user-friendly and visually aesthetic Citation Generator user interface (UI) and user experience (UX) from inception to deployment.</li>
-                    <li>Developed an API for seamless integration with other applications, leveraging Elasticsearch for efficient and scalable search functionality.</li>
-                    <li>Successfully implemented data ingestion pipelines utilizing Apache Beam, ensuring efficient and reliable data processing for the citation generation process.</li>
-                </ul>
-                <div class="project-links">
-                    <a href="#" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Visit Site
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3 style="color:#fff;">Website Internationalization</h3>
-                <ul style="color:#8892b0; margin-bottom: 1rem; padding-left: 1.2em;">
-                    <li>Successfully implemented website internationalization (i18n) to support multiple languages and enhance user experience for a global audience.</li>
-                    <li>Developed and integrated custom utility functions to facilitate seamless language switching, content localization, and overall website accessibility for diverse user groups.</li>
-                </ul>
-                <div class="project-links">
-                    <a href="#" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>

@@ -10,8 +10,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/portfolio', // <=== set the base path to your repo name
-  assetPrefix: '/portfolio/', // <=== for static assets
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
 };
 
 export default withNextIntl(nextConfig);

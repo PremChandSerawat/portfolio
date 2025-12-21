@@ -18,7 +18,7 @@ export default function Hero() {
     <Section
       id="hero"
       bg="gradientVioletAzure"
-      py={0}
+      py={{ xs: 8, md: 0 }}
       scrollMarginTop="0px"
       sx={{
         minHeight: '100vh',
@@ -410,28 +410,30 @@ export default function Hero() {
               ))}
             </Stack>
           </AnimatedElement>
+
         </Box>
 
-        {/* Right visual element */}
+        {/* Visual element - responsive for both mobile and desktop */}
         <AnimatedElement
-          variant="fadeInRight"
+          variant="fadeInUp"
           delay={0.5}
           duration={1}
           triggerOnce
           sx={{
-            flex: 1,
-            display: { xs: 'none', lg: 'flex' },
+            flex: { xs: 'none', lg: 1 },
+            display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             position: 'relative',
+            mt: { xs: 4, lg: 0 },
           }}
         >
           {/* Tech stack floating cards */}
           <Box
             sx={{
               position: 'relative',
-              width: 400,
-              height: 400,
+              width: { xs: 280, sm: 320, lg: 400 },
+              height: { xs: 280, sm: 320, lg: 400 },
             }}
           >
             {/* Central gradient circle */}
@@ -441,8 +443,8 @@ export default function Hero() {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: 280,
-                height: 280,
+                width: { xs: 180, sm: 220, lg: 280 },
+                height: { xs: 180, sm: 220, lg: 280 },
                 borderRadius: '50%',
                 background: theme.palette.backgrounds.conicSpinner,
                 animation: 'spin 20s linear infinite',
@@ -463,8 +465,8 @@ export default function Hero() {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: 140,
-                height: 140,
+                width: { xs: 100, sm: 120, lg: 140 },
+                height: { xs: 100, sm: 120, lg: 140 },
                 borderRadius: '50%',
                 bgcolor: theme.palette.mode === 'dark' ? alpha(theme.palette.background.paper, 0.95) : 'background.paper',
                 boxShadow: `0 8px 32px ${alpha(theme.palette.secondary.main, 0.2)}`,
@@ -488,7 +490,7 @@ export default function Hero() {
             >
               <Typography
                 sx={(theme: Theme) => ({
-                  fontSize: '2.5rem',
+                  fontSize: { xs: '1.75rem', sm: '2rem', lg: '2.5rem' },
                   fontWeight: 800,
                   background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.info.main}, ${theme.palette.secondary.main})`,
                   backgroundSize: '200% 100%',
@@ -508,7 +510,7 @@ export default function Hero() {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: '0.75rem',
+                  fontSize: { xs: '0.6rem', sm: '0.7rem', lg: '0.75rem' },
                   fontWeight: 600,
                   color: 'text.secondary',
                   textTransform: 'uppercase',
@@ -557,10 +559,10 @@ function TechBadges() {
               top: tech.top,
               left: tech.left,
               transform: 'translate(-50%, -50%)',
-              px: 2,
-              py: 1,
+              px: { xs: 1, sm: 1.5, lg: 2 },
+              py: { xs: 0.5, sm: 0.75, lg: 1 },
               bgcolor: isDark ? alpha(theme.palette.background.paper, 0.95) : 'background.paper',
-              borderRadius: 2,
+              borderRadius: { xs: 1.5, lg: 2 },
               boxShadow: `0 4px 20px ${alpha(theme.palette.text.primary, 0.1)}`,
               border: `1px solid ${alpha(techColor!, 0.3)}`,
               animation: `fadeInBadge 0.8s ease-out forwards, ${floatAnim} ${tech.duration}s ease-in-out infinite, glowPulse 4s ease-in-out infinite`,
@@ -638,7 +640,7 @@ function TechBadges() {
               const isDark = theme.palette.mode === 'dark';
               const techColor = tech.colorKey === 'dynamic' ? (isDark ? '#fff' : '#000') : tech.color;
               return {
-                fontSize: '0.85rem',
+                fontSize: { xs: '0.65rem', sm: '0.75rem', lg: '0.85rem' },
                 fontWeight: 600,
                 color: techColor,
                 whiteSpace: 'nowrap',

@@ -1,0 +1,31 @@
+/* Critical CSS - Inlined for faster FCP */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent layout shift from FontAwesome loading */
+.fa, .fas, .fab, .far {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+/* Reduce Cumulative Layout Shift */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+

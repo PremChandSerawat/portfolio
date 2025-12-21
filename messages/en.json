@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "Prem Chand Serawat - Portfolio",
+    "description": "Full Stack Software Engineer with 6+ years of experience building scalable web apps, SaaS products, and delightful user experiences."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "theme": {
+    "switchToLight": "Switch to Light Mode",
+    "switchToDark": "Switch to Dark Mode"
+  },
+  "hero": {
+    "availableStatus": "✨ Available for opportunities",
+    "greeting": "Hi, I'm",
+    "experienceLabel": "Experience",
+    "tagline": {
+      "prefix": "I build",
+      "scalableWebApps": "scalable web apps",
+      "saasProducts": "SaaS products",
+      "and": "and",
+      "delightfulExperiences": "delightful user experiences"
+    },
+    "cta": {
+      "getInTouch": "Get in Touch",
+      "viewProjects": "View Projects"
+    },
+    "yearsExp": "Years Exp",
+    "techBadges": {
+      "react": "React",
+      "nextjs": "Next.js",
+      "nodejs": "Node.js",
+      "python": "Python",
+      "aws": "AWS",
+      "docker": "Docker",
+      "gcp": "GCP",
+      "postgresql": "PostgreSQL",
+      "typescript": "TypeScript",
+      "mongodb": "MongoDB"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "greeting": "Hi, I'm Prem!",
+    "subtitle": "Full Stack Engineer • Problem Solver",
+    "intro": "I'm a passionate and versatile",
+    "role": "Full Stack Software Engineer",
+    "withExperience": "with",
+    "yearsExperience": "6+ years",
+    "ofExperience": "of experience building high-quality web applications and SaaS products.",
+    "fromLaunching": "From launching robust",
+    "loanPlatforms": "Loan Origination platforms",
+    "toDeveloping": "to developing",
+    "aiTools": "AI-powered writing tools at QuillBot",
+    "prideBuildingSolutions": "I take pride in building solutions that drive innovation and positive user experiences.",
+    "recentFocus": "My recent focus includes leveraging machine learning and cloud-native architectures to empower products and people. Let's connect and build something impactful together!",
+    "values": {
+      "cleanCode": "Clean, efficient code",
+      "teamwork": "Collaborative teamwork",
+      "learning": "Continuous learning",
+      "innovation": "Innovation-focused"
+    },
+    "highlights": {
+      "fullStackExpert": {
+        "title": "Full Stack Expert",
+        "description": "React, Next.js, Node.js, Python — crafting seamless experiences from frontend to backend."
+      },
+      "cloudNative": {
+        "title": "Cloud Native",
+        "description": "GCP, Azure, Docker — building scalable, production-ready cloud architectures."
+      },
+      "aiMlDriven": {
+        "title": "AI & ML Driven",
+        "description": "Leveraging machine learning and LLMs to create intelligent, next-gen products."
+      },
+      "dataEngineering": {
+        "title": "Data Engineering",
+        "description": "Elasticsearch, Apache Beam — processing millions of records for analytics."
+      }
+    },
+    "openToOpportunities": "Open to collaboration and new opportunities",
+    "hiring": "Hiring?",
+    "stats": {
+      "productsBuilt": "Products Built",
+      "linesOfCode": "Lines of Code",
+      "aiProjects": "AI Projects"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "cloudDevops": "Cloud & DevOps",
+      "dataAnalytics": "Data & Analytics",
+      "toolsOthers": "Tools & Others"
+    },
+    "competencies": {
+      "core": "Core Competencies",
+      "soft": "Soft Skills"
+    },
+    "competencyNames": {
+      "softwareDevelopment": "Software Development",
+      "cloudComputing": "Cloud Computing",
+      "dataVisualization": "Data Visualization",
+      "dataEngineering": "Data Engineering",
+      "machineLearning": "Machine Learning",
+      "crossCulturalComm": "Cross-Cultural Communication",
+      "trainingDev": "Training and Development",
+      "interpersonal": "Interpersonal Skills",
+      "strategicInsight": "Strategic Insight Translation",
+      "stakeholderEmp": "Stakeholder Empowerment",
+      "relationshipBuilding": "Relationship Building"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "overline": "Portfolio",
+    "subtitle": "A collection of projects I've built, ranging from AI-powered tools to large-scale data systems",
+    "showing": "Showing {count} of {total} projects",
+    "categories": {
+      "all": "All Projects",
+      "web": "Web Apps",
+      "ai": "AI & ML",
+      "data": "Data Engineering",
+      "mobile": "Mobile"
+    },
+    "items": {
+      "quillbotFlow": {
+        "title": "QuillBot Flow",
+        "description": [
+          "I spearheaded the development of QuillBot Flow, designing the initial prototype and building the user interface (UI) and user experience (UX) from the ground up. My focus was on creating an intuitive and collaborative writing environment that caters to diverse user needs.",
+          "To make QuillBot Flow a comprehensive writing assistant, I seamlessly integrated advanced features such as Paraphrasing, Grammar Checking, and Citation Generation, allowing users to write, edit, and properly reference content within a single platform.",
+          "For the rich text editing component, I leveraged TinyMCE's capabilities to enhance both the grammar checking and collaborative writing functionalities within QuillBot Flow. This integration ensured a robust, flexible, and user-friendly editing experience for our users."
+        ]
+      },
+      "cms": {
+        "title": "CMS",
+        "description": [
+          "Developed a content management system (CMS) from scratch to facilitate website deployment and administration for multiple platforms. Achieved pixel-perfect web page rendering without reliance on external design frameworks."
+        ]
+      },
+      "paraphrasingTool": {
+        "title": "Paraphrasing Tool (QuillBot)",
+        "description": [
+          "Designed and implemented intuitive and user-friendly interfaces (UI) and user experiences (UX) for various projects, enhancing user satisfaction and engagement. Managed and optimized content to ensure seamless navigation and engaging user experience."
+        ]
+      },
+      "citationGenerator": {
+        "title": "Citation Generator",
+        "description": [
+          "Developed and implemented a user-friendly and visually aesthetic Citation Generator user interface (UI) and user experience (UX) from inception to deployment.",
+          "Developed an API for seamless integration with other applications, leveraging Elasticsearch for efficient and scalable search functionality.",
+          "Successfully implemented data ingestion pipelines utilizing Apache Beam, ensuring efficient and reliable data processing for the citation generation process."
+        ]
+      },
+      "i18n": {
+        "title": "Website Internationalization",
+        "description": [
+          "Successfully implemented website internationalization (i18n) to support multiple languages and enhance user experience for a global audience.",
+          "Developed and integrated custom utility functions to facilitate seamless language switching, content localization, and overall website accessibility for diverse user groups."
+        ]
+      },
+      "grammarChecker": {
+        "title": "Grammar Checker (QuillBot)",
+        "description": [
+          "Developed a fully functional grammar checker application from scratch, demonstrating proficiency in algorithm design and natural language processing. Created a user-friendly and visually appealing UI/UX design, enhancing product usability and user satisfaction."
+        ]
+      },
+      "bigData": {
+        "title": "Big Data Processing and Elasticsearch",
+        "description": [
+          "Designed and implemented high-performance stream and batch processing pipelines using Apache Beam, processing and storing over 160 million JSON records into Elasticsearch for advanced analytics and search capabilities."
+        ]
+      },
+      "ascendLos": {
+        "title": "Ascend LOS/LMS & Android Apps",
+        "description": [
+          "Contributed to the development of Ascend Origination System (AOS) and Ascend Management System (AMS), designed to optimize loan processing workflows for financial institutions. Developed Android apps for both customers and staff to streamline loan application and management processes."
+        ],
+        "linkText": "Play Store"
+      },
+      "aiChat": {
+        "title": "AI Chat",
+        "description": [
+          "As a key contributor to the QuillBot AI Chat project, I played a pivotal role in designing an intuitive and engaging UI/UX that enables users to effortlessly access powerful AI writing tools. Beyond creating a seamless and accessible user interface, I architected robust backend APIs to ensure fast, secure, and scalable interactions between users and the underlying language models. Additionally, I focused on enhancing AI prompt engineering to deliver highly relevant, context-aware responses that elevate the overall user experience. This multidisciplinary approach allowed me to help build a comprehensive, user-friendly, and intelligent platform trusted by diverse audiences for content creation, research, and communication."
+        ]
+      }
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "companies": "Companies",
+      "productsBuilt": "Products Built",
+      "aiProducts": "AI Products",
+      "certifications": "Certifications"
+    },
+    "jobs": {
+      "quillbot": {
+        "title": "Software Engineer II",
+        "company": "QuillBot It Solution Pvt. Ltd.",
+        "period": "Jul 2020 - Present",
+        "responsibilities": [
+          "Collaborated with cross-functional teams to deliver product features and provide application support.",
+          "Designed user-friendly UI/UX and developed core business logic to enhance functionality and performance.",
+          "Maintained SEO-optimized website content and implemented critical features to optimize efficiency.",
+          "Built and launched core platform tools: CMS, Paraphrasing Tool, Grammar Checker, QuillBot Flow, Citation Generator, and AI Chat.",
+          "Automated web data collection using Puppeteer, node-html-parser, and BeautifulSoup.",
+          "Managed projects from requirements to deployment, ensuring user and business needs were met."
+        ],
+        "achievements": "Processed and ingested 160M+ JSON records and 20M+ PDFs into Elasticsearch. Created a CMS for SEO, reducing dev time by 80%."
+      },
+      "ascend": {
+        "title": "Junior Software Engineer",
+        "company": "Ascend Capital",
+        "period": "Jul 2019 - Jun 2020",
+        "responsibilities": [
+          "Led design and rollout of comprehensive Loan Origination and Management Systems for web and mobile.",
+          "Built robust Android applications for staff and customers, enhancing service efficiency and accessibility.",
+          "Streamlined operational processes and reduced manual intervention in loan lifecycle management.",
+          "Improved usability and engagement through intuitive interface enhancements."
+        ],
+        "achievements": "Implemented a digital loan origination system, reducing manual errors and improving efficiency. Developed a loan management system for real-time insights and optimized lifecycle management."
+      }
+    }
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "professionalCertifications": "Professional Certifications",
+    "degrees": {
+      "aiDiploma": {
+        "degree": "PG Diploma in Artificial Intelligence",
+        "institution": "IIIT-Delhi",
+        "period": "2024"
+      },
+      "dsMlCert": {
+        "degree": "PG Certificate in Data Science & ML",
+        "institution": "Manipal Institute of Technology",
+        "period": "2024"
+      },
+      "btech": {
+        "degree": "B.Tech. (Information Technology)",
+        "institution": "Govt. Engineering College Bikaner",
+        "period": "2015 - 2019"
+      }
+    },
+    "certifications": {
+      "deepLearning": {
+        "name": "Deep Learning Specialization",
+        "provider": "DeepLearning.AI - Coursera"
+      },
+      "aiAgents": {
+        "name": "AI Agents and Agentic AI with Python & Generative AI",
+        "provider": "Vanderbilt University - Coursera"
+      },
+      "neuralNetworks": {
+        "name": "Neural Networks and Deep Learning",
+        "provider": "DeepLearning.AI - Coursera"
+      },
+      "improvingDnn": {
+        "name": "Improving Deep Neural Networks",
+        "provider": "DeepLearning.AI - Coursera"
+      },
+      "structuringMl": {
+        "name": "Structuring Machine Learning Projects",
+        "provider": "DeepLearning.AI - Coursera"
+      },
+      "cnn": {
+        "name": "Convolutional Neural Networks",
+        "provider": "DeepLearning.AI - Coursera"
+      },
+      "sequenceModels": {
+        "name": "Sequence Models",
+        "provider": "DeepLearning.AI - Coursera"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "connectWithMe": "Connect with me"
+  },
+  "personal": {
+    "name": "Prem Chand Serawat",
+    "firstName": "Prem",
+    "title": "Full Stack Engineer",
+    "experience": "6+ Years",
+    "location": "Jaipur, India"
+  },
+  "common": {
+    "viewProject": "View Project"
+  }
+}
+

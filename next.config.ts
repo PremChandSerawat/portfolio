@@ -5,6 +5,16 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: 'export',
+  reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/portfolio', // <=== set the base path to your repo name
+  assetPrefix: '/portfolio/', // <=== for static assets
 };
 
 export default withNextIntl(nextConfig);
+
+
+module.exports = nextConfig;

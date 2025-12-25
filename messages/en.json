@@ -47,18 +47,18 @@
   "about": {
     "title": "About Me",
     "greeting": "Hi, I'm Prem!",
-    "subtitle": "Full Stack Engineer • Problem Solver",
-    "intro": "I'm a passionate and versatile",
-    "role": "Full Stack Software Engineer",
+    "subtitle": "Full Stack Engineer • AI Product Builder",
+    "intro": "I'm a passionate",
+    "role": "Full Stack & Applied AI Engineer",
     "withExperience": "with",
     "yearsExperience": "6+ years",
-    "ofExperience": "of experience building high-quality web applications and SaaS products.",
-    "fromLaunching": "From launching robust",
-    "loanPlatforms": "Loan Origination platforms",
-    "toDeveloping": "to developing",
-    "aiTools": "AI-powered writing tools at QuillBot",
-    "prideBuildingSolutions": "I take pride in building solutions that drive innovation and positive user experiences.",
-    "recentFocus": "My recent focus includes leveraging machine learning and cloud-native architectures to empower products and people. Let's connect and build something impactful together!",
+    "ofExperience": "of experience building AI-powered products used by millions.",
+    "fromLaunching": "At QuillBot, I've built",
+    "loanPlatforms": "AI Chat, Flow, Paraphrasing & Grammar tools",
+    "toDeveloping": "— from architecting",
+    "aiTools": "multi-agent AI systems to optimizing LLM inference costs by 70%",
+    "prideBuildingSolutions": "I take pride in shipping products that drive real user impact.",
+    "recentFocus": "Currently focused on Agentic AI, LangGraph, and building autonomous AI systems. Previously shipped Loan Origination platforms at Ascend Capital. Let's build something impactful!",
     "values": {
       "cleanCode": "Clean, efficient code",
       "teamwork": "Collaborative teamwork",
@@ -68,19 +68,23 @@
     "highlights": {
       "fullStackExpert": {
         "title": "Full Stack Expert",
-        "description": "React, Next.js, Node.js, Python — crafting seamless experiences from frontend to backend."
+        "description": "Built QuillBot Flow, CMS & Citation Generator end-to-end using React, Next.js, Node.js & Python."
+      },
+      "agenticAi": {
+        "title": "Agentic AI",
+        "description": "Architected AI Chat's multi-agent system with orchestrator, planning, search & document intelligence agents."
       },
       "cloudNative": {
         "title": "Cloud Native",
-        "description": "GCP, Azure, Docker — building scalable, production-ready cloud architectures."
+        "description": "Deployed scalable AI products on GCP & Azure with Docker, handling millions of daily requests."
       },
       "aiMlDriven": {
         "title": "AI & ML Driven",
-        "description": "Leveraging machine learning and LLMs to create intelligent, next-gen products."
+        "description": "Built Paraphrasing Tool & Grammar Checker using NLP, LLMs with 60-70% cost optimization."
       },
       "dataEngineering": {
         "title": "Data Engineering",
-        "description": "Elasticsearch, Apache Beam — processing millions of records for analytics."
+        "description": "Processed 160M+ records via Apache Beam & Elasticsearch for Citation Generator's search pipeline."
       }
     },
     "openToOpportunities": "Open to collaboration and new opportunities",
@@ -96,10 +100,10 @@
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
+      "ai": "AI & LLMs",
       "databases": "Databases",
-      "cloudDevops": "Cloud & DevOps",
-      "dataAnalytics": "Data & Analytics",
-      "toolsOthers": "Tools & Others"
+      "cloud": "Cloud & DevOps",
+      "data": "Data Engineering"
     },
     "competencies": {
       "core": "Core Competencies",
@@ -134,30 +138,227 @@
     "items": {
       "quillbotFlow": {
         "title": "QuillBot Flow",
+        "subtitle": "AI Writing & Research Workspace",
         "description": [
-          "I spearheaded the development of QuillBot Flow, designing the initial prototype and building the user interface (UI) and user experience (UX) from the ground up. My focus was on creating an intuitive and collaborative writing environment that caters to diverse user needs.",
-          "To make QuillBot Flow a comprehensive writing assistant, I seamlessly integrated advanced features such as Paraphrasing, Grammar Checking, and Citation Generation, allowing users to write, edit, and properly reference content within a single platform.",
-          "For the rich text editing component, I leveraged TinyMCE's capabilities to enhance both the grammar checking and collaborative writing functionalities within QuillBot Flow. This integration ensured a robust, flexible, and user-friendly editing experience for our users."
+          "QuillBot Flow is an all-in-one AI-powered writing and research workspace that unifies drafting, editing, paraphrasing, summarization, citations, grammar checking, and AI assistance into a single seamless interface.",
+          "Owned end-to-end engineering of QuillBot Flow, contributing across frontend, backend, and AI integration layers to deliver a cohesive, production-ready writing experience.",
+          "Designed and implemented a unified writing canvas architecture, enabling multiple AI-powered tools to operate seamlessly within a single editor without disrupting the user's writing flow."
+        ],
+        "highlights": [
+          "Integrated AI-assisted text generation and autocomplete capabilities for real-time ideation and content refinement",
+          "Built tool orchestration logic for paraphrasing, summarization, grammar checking, citation generation, and research features to work together smoothly",
+          "Engineered low-latency interactions through optimized client-side state management and asynchronous AI calls",
+          "Implemented session persistence, autosave, and restore mechanisms for seamless long-form writing",
+          "Designed modular components and reusable services supporting rapid feature expansion and high concurrent usage"
+        ],
+        "impact": [
+          "Eliminated context switching by consolidating multiple writing tools into one AI-driven workspace",
+          "Improved writing speed and productivity through real-time AI assistance",
+          "Enhanced user engagement and retention with intuitive end-to-end writing workflow"
         ]
       },
       "cms": {
-        "title": "CMS",
+        "title": "Tina CMS",
+        "subtitle": "SEO-Driven Content Management Platform",
         "description": [
-          "Developed a content management system (CMS) from scratch to facilitate website deployment and administration for multiple platforms. Achieved pixel-perfect web page rendering without reliance on external design frameworks."
+          "Tina CMS is a modern, SEO-focused content management system designed to enable rapid creation, management, and publishing of high-performance web pages with minimal engineering effort.",
+          "Designed and developed a scalable, SEO-first CMS architecture that significantly reduced engineering dependency for content creation and page updates.",
+          "The platform empowers non-technical teams to manage content independently while ensuring scalability, performance, and search engine optimization best practices."
+        ],
+        "highlights": [
+          "Implemented dynamic page generation and content-driven routing for rapid publishing without code changes",
+          "Built flexible content schemas and reusable components for efficient page composition with brand consistency",
+          "Integrated on-page SEO controls including metadata management, structured data, and search-friendly URLs",
+          "Optimized page load performance and rendering strategies for improved Core Web Vitals",
+          "Developed editor-friendly workflows and preview environments for safe content iteration"
+        ],
+        "impact": [
+          "Reduced page development effort by ~80%, enabling faster go-to-market",
+          "Improved SEO performance and organic traffic through optimized page structures",
+          "Empowered non-engineering teams to publish content independently"
         ]
       },
       "paraphrasingTool": {
-        "title": "Paraphrasing Tool (QuillBot)",
+        "title": "Paraphrasing Tool",
+        "subtitle": "AI-Powered Writing Enhancement",
         "description": [
-          "Designed and implemented intuitive and user-friendly interfaces (UI) and user experiences (UX) for various projects, enhancing user satisfaction and engagement. Managed and optimized content to ensure seamless navigation and engaging user experience."
+          "QuillBot's Paraphrasing Tool is a core AI-driven writing product used by millions of users to rewrite, refine, and enhance text while preserving original meaning and intent.",
+          "Contributed to the design and evolution of the core paraphrasing engine, integrating applied NLP techniques and LLM-based rewriting to deliver high-quality, meaning-preserving text transformations.",
+          "The tool supports multiple rewriting modes and quality controls, enabling users to improve clarity, fluency, and tone across academic, professional, and creative writing."
+        ],
+        "highlights": [
+          "Built scalable backend services and APIs supporting high-volume paraphrasing with low latency",
+          "Implemented mode-based rewriting logic for flexible control over tone, fluency, and creativity",
+          "Optimized inference performance through batching, caching, and intelligent request handling",
+          "Integrated real-time editing workflows for seamless copy, replace, and compare interactions",
+          "Designed validation and fallback mechanisms for consistent output quality under high load"
+        ],
+        "impact": [
+          "Delivered high-quality paraphrasing at scale for millions of global users",
+          "Improved response latency and system stability through backend optimizations",
+          "Enhanced user trust through meaning fidelity and linguistic correctness"
         ]
       },
       "citationGenerator": {
         "title": "Citation Generator",
+        "subtitle": "Automated Academic & Research Citations",
         "description": [
-          "Developed and implemented a user-friendly and visually aesthetic Citation Generator user interface (UI) and user experience (UX) from inception to deployment.",
-          "Developed an API for seamless integration with other applications, leveraging Elasticsearch for efficient and scalable search functionality.",
-          "Successfully implemented data ingestion pipelines utilizing Apache Beam, ensuring efficient and reliable data processing for the citation generation process."
+          "QuillBot's Citation Generator is an AI-assisted research tool that helps users automatically generate accurate, properly formatted citations across multiple academic styles.",
+          "Contributed to the design and development of the citation generation platform, supporting multiple citation styles and source types within a unified system.",
+          "The product simplifies the research and writing workflow by reducing manual citation effort while ensuring consistency, correctness, and academic compliance."
+        ],
+        "highlights": [
+          "Built scalable backend services and APIs to transform URLs, identifiers, and metadata into structured citations",
+          "Implemented style-specific formatting logic and validation rules for accurate academic standards",
+          "Integrated source parsing and metadata extraction pipelines improving citation accuracy",
+          "Optimized response latency and throughput for high-volume usage with reliability",
+          "Implemented error handling and fallback strategies for incomplete source information"
+        ],
+        "impact": [
+          "Significantly reduced manual citation effort for students and researchers",
+          "Improved accuracy and consistency across all supported citation formats",
+          "Delivered a scalable system handling large volumes of concurrent requests"
+        ]
+      },
+      "multiSiteCms": {
+        "title": "Multi-Site CMS Platform",
+        "subtitle": "Unified Content Management for Multiple Websites",
+        "description": [
+          "Designed and developed a unified CMS platform powering multiple high-traffic websites from a single codebase with complete frontend UI and backend infrastructure.",
+          "Built multi-tenant architecture enabling rapid deployment of new sites with shared components, consistent branding, and centralized content management.",
+          "The platform allows efficient scaling, reduced maintenance overhead, and seamless feature rollouts across all properties."
+        ],
+        "sites": [
+          { "name": "Spinbot.com", "url": "https://spinbot.com" },
+          { "name": "Paraphrasing-Tool.com", "url": "https://paraphrasing-tool.com" },
+          { "name": "ArticleRewriterTool.com", "url": "https://articlerewritertool.com" },
+          { "name": "Free-Article-Spinner.com", "url": "https://free-article-spinner.com" }
+        ],
+        "highlights": [
+          "Architected multi-tenant CMS supporting 4+ production websites from single codebase",
+          "Built reusable UI component library ensuring consistent design across all sites",
+          "Implemented centralized backend APIs serving multiple frontends efficiently",
+          "Developed SEO-optimized page templates achieving high organic search rankings",
+          "Created admin dashboard for unified content and configuration management"
+        ],
+        "impact": [
+          "Reduced development and maintenance effort by 70% through code reuse",
+          "Enabled rapid deployment of new sites in days instead of months",
+          "Achieved consistent user experience across all platform properties"
+        ]
+      },
+      "chatPdf": {
+        "title": "Chat PDF",
+        "subtitle": "AI-Powered Document Interaction",
+        "description": [
+          "Developed QuillBot's Chat PDF tool, an AI-driven document assistant enabling users to upload PDFs and interact conversationally to extract insights, generate summaries, and answer questions.",
+          "Built backend and frontend components to support instant upload, processing, and Q&A interaction with PDF content.",
+          "Designed AI-assisted document parsing workflows to efficiently analyze long and complex PDFs."
+        ],
+        "highlights": [
+          "Implemented mechanisms to summarize, extract key facts, and answer questions using conversational AI",
+          "Optimized performance to deliver fast, accurate responses from large files in real time",
+          "Collaborated with product and UX teams for intuitive interaction flows"
+        ],
+        "impact": [
+          "Enabled quick insight extraction from dense reports and research papers",
+          "Improved productivity by eliminating manual searching and reading",
+          "Enhanced document utility within QuillBot's ecosystem"
+        ]
+      },
+      "speechToText": {
+        "title": "Speech to Text",
+        "subtitle": "Real-Time Audio Transcription",
+        "description": [
+          "Developed the Speech to Text converter, an AI-powered tool that accurately transcribes spoken language into written text in real time.",
+          "Built and integrated the speech recognition engine using advanced AI models for accurate transcription.",
+          "The feature supports multiple languages and dialects, catering to transcription, note-taking, and accessibility needs."
+        ],
+        "highlights": [
+          "Created real-time capture interface for microphone inputs with editing capabilities",
+          "Ensured multilingual support and noise-robust processing for diverse audio inputs",
+          "Optimized performance for low-latency transcription with real-time feedback"
+        ],
+        "impact": [
+          "Simplified transcription workflows for meetings and lectures",
+          "Enhanced accessibility with accurate text conversion for spoken content",
+          "Expanded QuillBot's cross-modal support beyond writing"
+        ]
+      },
+      "textToSpeech": {
+        "title": "Text to Speech",
+        "subtitle": "Natural Audio Rendering",
+        "description": [
+          "Built the Text to Speech tool, transforming written text into natural, lifelike audio for accessibility, learning, or voice-centric applications.",
+          "Integrated advanced voice synthesis models to render natural-sounding audio across multiple languages.",
+          "Designed user-friendly interface allowing text input and audio output in customizable formats."
+        ],
+        "highlights": [
+          "Developed efficient encoding and processing pipelines for fast audio generation",
+          "Ensured output files could be easily downloaded and reused across platforms",
+          "Supported multiple languages and voice options"
+        ],
+        "impact": [
+          "Improved content accessibility for learners and visually impaired users",
+          "Enabled audio content creation for podcasts and presentations",
+          "Enhanced QuillBot's multimodal engagement capabilities"
+        ]
+      },
+      "imageToText": {
+        "title": "Image to Text",
+        "subtitle": "OCR Text Extraction",
+        "description": [
+          "Developed the Image to Text converter, an OCR tool that extracts text from uploaded images including screenshots, scanned notes, and photos.",
+          "Integrated OCR frameworks to reliably scan and extract text from uploaded images.",
+          "Built an accessible UI for image upload, processing status, and text output."
+        ],
+        "highlights": [
+          "Supported common image formats with optimized pipeline for fast processing",
+          "Achieved high accuracy text extraction from various image types",
+          "Enabled seamless conversion of visual text into editable form"
+        ],
+        "impact": [
+          "Improved workflow efficiency for digitizing notes and printed content",
+          "Empowered users to convert visual text without manual re-typing",
+          "Expanded QuillBot's document processing capabilities"
+        ]
+      },
+      "qrCodeGenerator": {
+        "title": "QR Code Generator",
+        "subtitle": "Instant Code Creation",
+        "description": [
+          "Delivered the QR Code Generator, a web-based tool that generates high-quality QR codes for URLs, text, contact information, and other digital content.",
+          "Built a responsive generator interface allowing users to input content and instantly generate QR codes.",
+          "Implemented code rendering logic supporting multiple data types and formats."
+        ],
+        "highlights": [
+          "Ensured high-resolution export options suitable for print and digital marketing",
+          "Added error-handling and validation for accurate QR code generation",
+          "Built fast, zero-friction user experience for instant code creation"
+        ],
+        "impact": [
+          "Provided users zero-friction way to create and share QR codes",
+          "Enhanced QuillBot tool set with practical utility",
+          "Supported diverse sharing workflows"
+        ]
+      },
+      "wordCloud": {
+        "title": "Word Cloud Generator",
+        "subtitle": "Visual Text Analysis",
+        "description": [
+          "Contributed to the Word Cloud Generator, designed to help users create expressive visual elements from text that highlight word frequency and themes.",
+          "Built frontend interactive UI components to input text and generate graphical outputs.",
+          "Implemented data processing logic to derive word frequency and design visual layouts."
+        ],
+        "highlights": [
+          "Integrated scalable rendering pipelines for responsive visual generation",
+          "Designed export/download features for reports and presentations",
+          "Enabled customization of colors, fonts, and layouts"
+        ],
+        "impact": [
+          "Enabled users to visualize textual insights quickly",
+          "Aided brainstorming and research with visual word analysis",
+          "Expanded QuillBot's creative utility tools"
         ]
       },
       "i18n": {
@@ -168,9 +369,24 @@
         ]
       },
       "grammarChecker": {
-        "title": "Grammar Checker (QuillBot)",
+        "title": "Grammar Checker",
+        "subtitle": "AI-Powered Writing Quality & Correction",
         "description": [
-          "Developed a fully functional grammar checker application from scratch, demonstrating proficiency in algorithm design and natural language processing. Created a user-friendly and visually appealing UI/UX design, enhancing product usability and user satisfaction."
+          "QuillBot's Grammar Checker is an AI-driven language quality tool that detects and corrects grammatical, spelling, and stylistic issues in real time.",
+          "Contributed to the design and development of the grammar checking system, combining rule-based NLP techniques with ML and LLM-assisted correction pipelines for context-aware suggestions.",
+          "The product helps users produce clear, fluent, and professional writing across academic, business, and everyday use cases."
+        ],
+        "highlights": [
+          "Built scalable backend services and APIs for high-volume grammar checking with low latency",
+          "Implemented real-time feedback mechanisms for seamless view, accept, or reject corrections",
+          "Designed error classification and prioritization logic surfacing high-impact issues prominently",
+          "Optimized performance through efficient request handling, caching, and async processing",
+          "Implemented validation, monitoring, and fallback mechanisms for consistent output quality"
+        ],
+        "impact": [
+          "Improved writing clarity and correctness for a large global user base",
+          "Delivered low-latency, real-time grammar feedback in writing workflows",
+          "Increased user trust by balancing accuracy with tone preservation"
         ]
       },
       "bigData": {
@@ -187,9 +403,28 @@
         "linkText": "Play Store"
       },
       "aiChat": {
-        "title": "AI Chat",
+        "title": "AI Chat Platform",
+        "subtitle": "Multi-Agent Agentic AI System",
+        "role": "Software Engineer II (Full-Stack & Applied AI)",
+        "company": "QuillBot IT Solution Pvt. Ltd.",
         "description": [
-          "As a key contributor to the QuillBot AI Chat project, I played a pivotal role in designing an intuitive and engaging UI/UX that enables users to effortlessly access powerful AI writing tools. Beyond creating a seamless and accessible user interface, I architected robust backend APIs to ensure fast, secure, and scalable interactions between users and the underlying language models. Additionally, I focused on enhancing AI prompt engineering to deliver highly relevant, context-aware responses that elevate the overall user experience. This multidisciplinary approach allowed me to help build a comprehensive, user-friendly, and intelligent platform trusted by diverse audiences for content creation, research, and communication."
+          "Designed and delivered a production-grade AI Chat platform built on a multi-agent, agentic AI architecture, enabling users to perform research, document analysis, content generation, and utility-based actions through a single conversational interface.",
+          "Architected a multi-agent agentic AI system where a central orchestrator agent dynamically plans tasks, routes tools, and coordinates specialized agents based on user intent and query complexity.",
+          "Built an intent detection and intelligent query planning layer that decomposes complex user requests into reliable multi-step execution flows across search, documents, and generative reasoning."
+        ],
+        "highlights": [
+          "Engineered in-chat web search with source credibility scoring, relevance ranking, and sentence-level citations for trusted, verifiable AI responses",
+          "Delivered document intelligence pipeline with layout-aware parsing, semantic chunking, and hybrid retrieval (vector + keyword search)",
+          "Developed layout-aware OCR and image-to-text capabilities supporting multilingual content and structured outputs",
+          "Implemented token-aware context management, prompt caching, and dynamic model routing",
+          "Designed deterministic utility agents to offload non-generative tasks from LLMs"
+        ],
+        "agents": ["Orchestrator", "Intent & Planning", "Search & Retrieval", "Document Intelligence", "OCR", "Utility", "Citation & Trust", "Cost Optimization"],
+        "patterns": ["Agentic Planning", "Tool Routing", "Hybrid RAG", "Citation-backed Generation", "Cost-aware Inference"],
+        "impact": [
+          "~80% reduction in end-to-end response latency via intelligent tool routing",
+          "60–70% reduction in AI inference costs through context optimization and caching",
+          "Trusted AI outputs through citation-backed search and document grounding"
         ]
       }
     }

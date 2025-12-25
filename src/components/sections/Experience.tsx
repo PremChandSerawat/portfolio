@@ -55,8 +55,8 @@ export default function Experience() {
                 sx={(theme: Theme) => {
                   const isDark = theme.palette.mode === 'dark';
                   return {
-                    p: { xs: 3, md: 4 },
-                    borderRadius: 4,
+                    p: { xs: 2, sm: 3, md: 4 },
+                    borderRadius: { xs: 3, md: 4 },
                     bgcolor: isDark 
                       ? alpha(theme.palette.background.paper, 0.5) 
                       : theme.palette.background.paper,
@@ -86,50 +86,53 @@ export default function Experience() {
                 />
 
                 {/* Header */}
-                <Stack direction="row" alignItems="flex-start" justifyContent="space-between" sx={{ mb: 2 }}>
+                <Stack direction="column" spacing={1} sx={{ mb: 2 }}>
                   <Box>
                     <Typography
                       variant="h6"
                       sx={{
                         fontWeight: 700,
                         color: 'text.primary',
-                        fontSize: { xs: '1.1rem', md: '1.25rem' },
+                        fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
                         mb: 0.5,
                       }}
                     >
                       {t(`jobs.${jobKey}.title`)}
                     </Typography>
-                    <Stack direction="row" alignItems="center" spacing={1}>
-                      <BusinessIcon sx={{ fontSize: 16, color: data.color }} />
-                      <Typography sx={{ color: data.color, fontWeight: 600, fontSize: '0.95rem' }}>
-                        {t(`jobs.${jobKey}.company`)}
-                      </Typography>
+                    <Stack direction="row" alignItems="center" spacing={1} flexWrap="wrap">
+                      <Stack direction="row" alignItems="center" spacing={0.5}>
+                        <BusinessIcon sx={{ fontSize: { xs: 14, md: 16 }, color: data.color }} />
+                        <Typography sx={{ color: data.color, fontWeight: 600, fontSize: { xs: '0.85rem', md: '0.95rem' } }}>
+                          {t(`jobs.${jobKey}.company`)}
+                        </Typography>
+                      </Stack>
+                      <Chip
+                        icon={<CalendarTodayIcon sx={{ fontSize: '12px !important' }} />}
+                        label={t(`jobs.${jobKey}.period`)}
+                        size="small"
+                        sx={{
+                          bgcolor: alpha(data.color, 0.1),
+                          color: data.color,
+                          fontWeight: 500,
+                          fontSize: { xs: '0.65rem', md: '0.75rem' },
+                          height: { xs: 22, md: 24 },
+                          '& .MuiChip-icon': { color: data.color },
+                        }}
+                      />
                     </Stack>
                   </Box>
-                  <Chip
-                    icon={<CalendarTodayIcon sx={{ fontSize: '14px !important' }} />}
-                    label={t(`jobs.${jobKey}.period`)}
-                    size="small"
-                    sx={{
-                      bgcolor: alpha(data.color, 0.1),
-                      color: data.color,
-                      fontWeight: 500,
-                      fontSize: '0.75rem',
-                      '& .MuiChip-icon': { color: data.color },
-                    }}
-                  />
                 </Stack>
 
                 {/* Skills */}
-                <Stack direction="row" spacing={0.5} flexWrap="wrap" gap={0.5} sx={{ mb: 3 }}>
+                <Stack direction="row" spacing={0.5} flexWrap="wrap" gap={0.5} sx={{ mb: { xs: 2, md: 3 }, display: { xs: 'none', sm: 'flex' } }}>
                   {data.skills.map((skill, idx) => (
                     <Chip
                       key={idx}
                       label={skill}
                       size="small"
                       sx={(theme: Theme) => ({
-                        height: 24,
-                        fontSize: '0.7rem',
+                        height: { xs: 20, md: 24 },
+                        fontSize: { xs: '0.65rem', md: '0.7rem' },
                         fontWeight: 600,
                         bgcolor: 'transparent',
                         color: 'text.secondary',
@@ -140,12 +143,12 @@ export default function Experience() {
                 </Stack>
 
                 {/* Key Points */}
-                <Box sx={{ mb: 3 }}>
+                <Box sx={{ mb: { xs: 2, md: 3 } }}>
                   {responsibilities.slice(0, 3).map((resp, idx) => (
-                    <Stack key={idx} direction="row" spacing={1.5} alignItems="flex-start" sx={{ mb: 1.5 }}>
+                    <Stack key={idx} direction="row" spacing={1} alignItems="flex-start" sx={{ mb: { xs: 1, md: 1.5 } }}>
                       <ArrowOutwardIcon 
                         sx={{ 
-                          fontSize: 14, 
+                          fontSize: { xs: 12, md: 14 }, 
                           color: data.color, 
                           mt: 0.5,
                           flexShrink: 0,
@@ -156,7 +159,7 @@ export default function Experience() {
                         sx={{ 
                           color: 'text.secondary', 
                           lineHeight: 1.6,
-                          fontSize: '0.85rem',
+                          fontSize: { xs: '0.8rem', md: '0.85rem' },
                         }}
                       >
                         {resp}
@@ -170,7 +173,7 @@ export default function Experience() {
                   sx={(theme: Theme) => {
                     const isDark = theme.palette.mode === 'dark';
                     return {
-                      p: 2,
+                      p: { xs: 1.5, md: 2 },
                       borderRadius: 2,
                       bgcolor: alpha(data.color, isDark ? 0.1 : 0.05),
                       borderLeft: `3px solid ${data.color}`,
@@ -182,7 +185,7 @@ export default function Experience() {
                     sx={{ 
                       color: 'text.secondary', 
                       fontStyle: 'italic',
-                      fontSize: '0.85rem',
+                      fontSize: { xs: '0.75rem', md: '0.85rem' },
                       lineHeight: 1.6,
                     }}
                   >
@@ -199,9 +202,9 @@ export default function Experience() {
       <AnimatedElement variant="fadeInUp" delay={0.4}>
         <Box
           sx={(theme: Theme) => ({
-            mt: 6,
-            p: { xs: 3, md: 4 },
-            borderRadius: 4,
+            mt: { xs: 4, md: 6 },
+            p: { xs: 2, sm: 3, md: 4 },
+            borderRadius: { xs: 3, md: 4 },
             background: theme.palette.backgrounds.violetAzureAlpha,
             border: `1px solid ${alpha(theme.palette.secondary.main, 0.2)}`,
             position: 'relative',
@@ -219,16 +222,15 @@ export default function Experience() {
               borderRadius: '50%',
               background: theme.palette.backgrounds.orbViolet,
               filter: 'blur(40px)',
+              display: { xs: 'none', md: 'block' },
             })}
           />
           
           <Box
             sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: { xs: 2, md: 3 },
-              alignItems: 'center',
-              justifyContent: 'center',
+              display: 'grid',
+              gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)', md: 'repeat(5, 1fr)' },
+              gap: { xs: 1.5, md: 2 },
               position: 'relative',
               zIndex: 1,
             }}
@@ -242,29 +244,31 @@ export default function Experience() {
                 delay={0.5}
               >
                 <Stack
-                  direction="row"
-                  spacing={2}
+                  direction={{ xs: 'column', sm: 'row' }}
+                  spacing={{ xs: 0.5, sm: 1 }}
                   alignItems="center"
+                  justifyContent="center"
                   sx={(theme: Theme) => {
                     const isDark = theme.palette.mode === 'dark';
                     return {
-                      px: { xs: 2, md: 3 },
-                      py: 1.5,
-                      borderRadius: 3,
+                      px: { xs: 1, sm: 2 },
+                      py: { xs: 1.5, sm: 1.5 },
+                      borderRadius: 2,
                       bgcolor: isDark ? alpha('#fff', 0.05) : alpha('#fff', 0.8),
                       backdropFilter: 'blur(10px)',
                       transition: 'transform 0.3s ease',
+                      textAlign: 'center',
                       '&:hover': {
                         transform: 'translateY(-2px)',
                       },
                     };
                   }}
                 >
-                  <Typography sx={{ fontSize: '1.5rem' }}>{stat.icon}</Typography>
-                  <Box>
+                  <Typography sx={{ fontSize: { xs: '1.25rem', md: '1.5rem' } }}>{stat.icon}</Typography>
+                  <Box sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
                     <Typography
                       sx={(theme: Theme) => ({
-                        fontSize: { xs: '1.5rem', md: '1.75rem' },
+                        fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem' },
                         fontWeight: 800,
                         lineHeight: 1,
                         background: theme.palette.backgrounds.violetAzure,
@@ -280,7 +284,8 @@ export default function Experience() {
                       sx={{ 
                         color: 'text.secondary', 
                         fontWeight: 500,
-                        fontSize: '0.75rem',
+                        fontSize: { xs: '0.6rem', sm: '0.7rem', md: '0.75rem' },
+                        display: 'block',
                       }}
                     >
                       {t(`stats.${stat.labelKey}`)}

@@ -8,11 +8,12 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import GroupsIcon from '@mui/icons-material/Groups';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 import { Section, SectionTitle, AnimatedElement } from '@/components/ui';
 
-const highlightIcons = [CodeIcon, CloudIcon, AutoAwesomeIcon, TrendingUpIcon];
-const highlightKeys = ['fullStackExpert', 'cloudNative', 'aiMlDriven', 'dataEngineering'] as const;
-const highlightColors = ['#3b82f6', '#7c3aed', '#f59e0b', '#10b981'];
+const highlightIcons = [CodeIcon, PsychologyIcon, CloudIcon, AutoAwesomeIcon, TrendingUpIcon];
+const highlightKeys = ['fullStackExpert', 'agenticAi', 'cloudNative', 'aiMlDriven', 'dataEngineering'] as const;
+const highlightColors = ['#3b82f6', '#ec4899', '#7c3aed', '#f59e0b', '#10b981'];
 
 const valueKeys = ['cleanCode', 'teamwork', 'learning', 'innovation'] as const;
 const valueIcons = ['🎯', '🤝', '📚', '💡'];
@@ -59,8 +60,8 @@ export default function About() {
         sx={{
           display: 'grid',
           gridTemplateColumns: { xs: '1fr', lg: '1.2fr 1fr' },
-          gap: { xs: 4, md: 6 },
-          mt: 4,
+          gap: { xs: 3, md: 6 },
+          mt: { xs: 3, md: 4 },
         }}
       >
         {/* Left: Story Card */}
@@ -172,7 +173,7 @@ export default function About() {
                 sx={{
                   display: 'flex',
                   flexWrap: 'wrap',
-                  gap: 1.5,
+                  gap: { xs: 1, md: 1.5 },
                   mt: 1,
                 }}
               >
@@ -215,8 +216,8 @@ export default function About() {
         {/* Right: Highlight Cards */}
         <Box
           sx={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
+            display: 'flex',
+            flexDirection: 'column',
             gap: 2,
           }}
         >
@@ -236,7 +237,7 @@ export default function About() {
                   sx={(theme: Theme) => {
                     const isDark = theme.palette.mode === 'dark';
                     return {
-                      p: { xs: 2.5, md: 3 },
+                      p: { xs: 2, md: 2.5 },
                       borderRadius: 3,
                       background: isDark
                         ? alpha(theme.palette.background.paper, 0.5)
@@ -246,7 +247,6 @@ export default function About() {
                       cursor: 'default',
                       position: 'relative',
                       overflow: 'hidden',
-                      height: '100%',
                       boxShadow: isDark
                         ? 'none'
                         : `0 4px 20px ${alpha(color, 0.08)}`,
@@ -267,54 +267,59 @@ export default function About() {
                       position: 'absolute',
                       top: 0,
                       right: 0,
-                      width: 60,
-                      height: 60,
-                      background: `linear-gradient(225deg, ${alpha(color, 0.15)} 0%, transparent 60%)`,
+                      width: 80,
+                      height: 80,
+                      background: `linear-gradient(225deg, ${alpha(color, 0.12)} 0%, transparent 60%)`,
                       borderRadius: '0 0 0 100%',
                     }}
                   />
 
-                  <Stack spacing={1.5}>
+                  <Stack direction="row" spacing={2} alignItems="center">
                     <Box
                       className="highlight-icon"
                       sx={(theme: Theme) => {
                         const isDark = theme.palette.mode === 'dark';
                         return {
-                          width: 44,
-                          height: 44,
-                          borderRadius: 2,
+                          width: 48,
+                          height: 48,
+                          borderRadius: 2.5,
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           background: alpha(color, isDark ? 0.15 : 0.1),
                           transition: 'transform 0.3s ease',
+                          flexShrink: 0,
                         };
                       }}
                     >
-                      <IconComponent sx={{ color: color, fontSize: 24 }} />
+                      <IconComponent sx={{ color: color, fontSize: 26 }} />
                     </Box>
 
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        fontWeight: 700,
-                        color: 'text.primary',
-                        fontSize: '1rem',
-                      }}
-                    >
-                      {t(`highlights.${key}.title`)}
-                    </Typography>
+                    <Box sx={{ flex: 1 }}>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          fontWeight: 700,
+                          color: 'text.primary',
+                          fontSize: '1rem',
+                          lineHeight: 1.3,
+                          mb: 0.5,
+                        }}
+                      >
+                        {t(`highlights.${key}.title`)}
+                      </Typography>
 
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: 'text.secondary',
-                        lineHeight: 1.6,
-                        fontSize: '0.85rem',
-                      }}
-                    >
-                      {t(`highlights.${key}.description`)}
-                    </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: 'text.secondary',
+                          lineHeight: 1.6,
+                          fontSize: '0.875rem',
+                        }}
+                      >
+                        {t(`highlights.${key}.description`)}
+                      </Typography>
+                    </Box>
                   </Stack>
                 </Paper>
               </AnimatedElement>

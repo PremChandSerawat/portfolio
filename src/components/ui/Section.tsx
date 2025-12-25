@@ -38,7 +38,7 @@ export default function Section({
   bg = 'solid',
   maxWidth = 'lg',
   disableContainer = false,
-  py = { xs: 8, md: 15 },
+  py = { xs: 6, md: 12 },
   scrollMarginTop = '90px',
   sx,
   containerSx,

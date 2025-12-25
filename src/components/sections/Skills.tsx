@@ -11,10 +11,10 @@ export default function Skills() {
   const skillCategories = [
     { titleKey: 'frontend', data: skills.frontend },
     { titleKey: 'backend', data: skills.backend },
+    { titleKey: 'ai', data: skills.ai },
     { titleKey: 'databases', data: skills.databases },
-    { titleKey: 'cloudDevops', data: skills.cloud },
-    { titleKey: 'dataAnalytics', data: skills.data },
-    { titleKey: 'toolsOthers', data: skills.tools },
+    { titleKey: 'cloud', data: skills.cloud },
+    { titleKey: 'data', data: skills.data },
   ] as const;
 
   // Map competencies with translated names
@@ -41,7 +41,6 @@ export default function Skills() {
             xs: '1fr',
             sm: 'repeat(2, 1fr)',
             md: 'repeat(3, 1fr)',
-            lg: 'repeat(4, 1fr)',
           },
           gap: 3,
         }}
@@ -64,12 +63,12 @@ export default function Skills() {
       <Stack
         direction={{ xs: 'column', md: 'row' }}
         spacing={3}
-        sx={{ mt: 6 }}
+        sx={{ mt: 6, alignItems: 'stretch' }}
       >
-        <AnimatedElement variant="fadeInLeft" delay={0.3} sx={{ flex: 1 }}>
+        <AnimatedElement variant="fadeInLeft" delay={0.3} sx={{ flex: 1, display: 'flex' }}>
           <CompetencyCard title={t('competencies.core')} competencies={coreCompetencies} />
         </AnimatedElement>
-        <AnimatedElement variant="fadeInRight" delay={0.4} sx={{ flex: 1 }}>
+        <AnimatedElement variant="fadeInRight" delay={0.4} sx={{ flex: 1, display: 'flex' }}>
           <CompetencyCard title={t('competencies.soft')} competencies={softCompetencies} />
         </AnimatedElement>
       </Stack>

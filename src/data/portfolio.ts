@@ -12,39 +12,46 @@ export const personalInfo = {
 export const skills = {
   frontend: [
     { name: "React.js", icon: "fab fa-react", color: "#61dafb" },
-    { name: "Next.js", icon: "fab fa-js", color: "#f7df1e" },
-    { name: "HTML5", icon: "fab fa-html5", color: "#e34c26" },
-    { name: "CSS3", icon: "fab fa-css3-alt", color: "#2965f1" },
+    { name: "Next.js", icon: "fas fa-n", color: "#000000" },
+    { name: "TypeScript", icon: "fas fa-code", color: "#3178c6" },
+    { name: "JavaScript", icon: "fab fa-js", color: "#f7df1e" },
+    { name: "Styled Components", icon: "fas fa-paint-brush", color: "#db7093" },
+    { name: "Sass/SCSS", icon: "fab fa-sass", color: "#cc6699" },
   ],
   backend: [
     { name: "Node.js", icon: "fab fa-node-js", color: "#8cc84b" },
-    { name: "NestJS", icon: "fas fa-cube", color: "#e0234e" },
-    { name: "Express.js", icon: "fab fa-node-js", color: "#8cc84b" },
     { name: "Python", icon: "fab fa-python", color: "#3776ab" },
+    { name: "Express.js", icon: "fab fa-node-js", color: "#000000" },
+    { name: "NestJS", icon: "fas fa-cube", color: "#e0234e" },
+    { name: "FastAPI", icon: "fas fa-bolt", color: "#009688" },
+  ],
+  ai: [
+    { name: "LangGraph", icon: "fas fa-project-diagram", color: "#ec4899" },
+    { name: "LangChain", icon: "fas fa-link", color: "#2dd4bf" },
+    { name: "OpenAI/LLMs", icon: "fas fa-brain", color: "#10a37f" },
+    { name: "RAG", icon: "fas fa-search-plus", color: "#8b5cf6" },
+    { name: "Prompt Engineering", icon: "fas fa-magic", color: "#f59e0b" },
+    { name: "Multi-Agent AI", icon: "fas fa-users-cog", color: "#3b82f6" },
   ],
   databases: [
-    { name: "MongoDB", icon: "fas fa-database", color: "#47a248" },
     { name: "PostgreSQL", icon: "fas fa-database", color: "#336791" },
-    { name: "MySQL", icon: "fas fa-database", color: "#00758f" },
+    { name: "MongoDB", icon: "fas fa-database", color: "#47a248" },
     { name: "Redis", icon: "fas fa-database", color: "#d82c20" },
+    { name: "Elasticsearch", icon: "fas fa-search", color: "#005571" },
+    { name: "Vector DBs", icon: "fas fa-cubes", color: "#8b5cf6" },
   ],
   cloud: [
     { name: "GCP", icon: "fab fa-google", color: "#4285f4" },
+    { name: "AWS", icon: "fab fa-aws", color: "#ff9900" },
     { name: "Azure", icon: "fab fa-microsoft", color: "#00a4ef" },
     { name: "Docker", icon: "fab fa-docker", color: "#2496ed" },
-    { name: "CI/CD", icon: "fas fa-code-branch", color: "#6e5494" },
+    { name: "Kubernetes", icon: "fas fa-dharmachakra", color: "#326ce5" },
   ],
   data: [
+    { name: "Apache Beam", icon: "fas fa-stream", color: "#e97627" },
+    { name: "Pandas/NumPy", icon: "fas fa-project-diagram", color: "#150458" },
     { name: "Tableau", icon: "fas fa-chart-bar", color: "#e97627" },
-    { name: "Power BI", icon: "fas fa-chart-pie", color: "#1f77b4" },
-    { name: "Pandas/NumPy", icon: "fas fa-project-diagram", color: "#e5c07b" },
-    { name: "Matplotlib/Seaborn", icon: "fas fa-chart-line", color: "#e34c26" },
-  ],
-  tools: [
-    { name: "Web Scraping", icon: "fas fa-spider", color: "#64ffda" },
-    { name: "Elasticsearch", icon: "fas fa-search", color: "#005571" },
-    { name: "Machine Learning", icon: "fas fa-robot", color: "#64ffda" },
-    { name: "Git", icon: "fas fa-code", color: "#64ffda" },
+    { name: "Power BI", icon: "fas fa-chart-pie", color: "#f2c811" },
   ],
 };
 
@@ -68,15 +75,22 @@ export const competencies = {
 
 // Project keys for i18n lookup
 export const projectKeys = [
+  "aiChat",
   "quillbotFlow",
+  "chatPdf",
+  "multiSiteCms",
   "cms",
   "paraphrasingTool",
   "citationGenerator",
-  "i18n",
   "grammarChecker",
+  "speechToText",
+  "textToSpeech",
+  "imageToText",
+  "qrCodeGenerator",
+  "wordCloud",
+  "i18n",
   "bigData",
   "ascendLos",
-  "aiChat",
 ] as const;
 
 export type ProjectKey = (typeof projectKeys)[number];
@@ -85,25 +99,26 @@ export const projectMeta: Record<
   ProjectKey,
   { link?: string; linkIcon?: string; isWide: boolean }
 > = {
-  quillbotFlow: { isWide: true },
+  aiChat: { link: "https://quillbot.com/ai-chat", isWide: true },
+  quillbotFlow: { link: "https://quillbot.com/flow", isWide: true },
+  chatPdf: { link: "https://quillbot.com/chat-pdf", isWide: true },
+  multiSiteCms: { link: "https://spinbot.com", isWide: true },
   cms: { isWide: false },
-  paraphrasingTool: {
-    link: "https://quillbot.com/paraphrasing-tool",
-    isWide: false,
-  },
-  citationGenerator: {
-    link: "https://quillbot.com/citation-generator",
-    isWide: true,
-  },
-  i18n: { isWide: true },
+  paraphrasingTool: { link: "https://quillbot.com/paraphrasing-tool", isWide: false },
+  citationGenerator: { link: "https://quillbot.com/citation-generator", isWide: false },
   grammarChecker: { link: "https://quillbot.com/grammar-check", isWide: false },
+  speechToText: { link: "https://quillbot.com/speech-to-text", isWide: false },
+  textToSpeech: { link: "https://quillbot.com/text-to-speech", isWide: false },
+  imageToText: { link: "https://quillbot.com/image-to-text", isWide: false },
+  qrCodeGenerator: { link: "https://quillbot.com/qr-code-generator", isWide: false },
+  wordCloud: { link: "https://quillbot.com/word-cloud-generator", isWide: false },
+  i18n: { isWide: false },
   bigData: { isWide: false },
   ascendLos: {
     link: "https://play.google.com/store/apps/details?id=com.lcgm.ascend_loan&pcampaignid=web_share",
     linkIcon: "fab fa-google-play",
-    isWide: true,
+    isWide: false,
   },
-  aiChat: { link: "https://quillbot.com/ai-chat", isWide: true },
 };
 
 // Navigation links with i18n keys
@@ -118,28 +133,42 @@ export const navLinkKeys = [
 
 // Tech tags for projects (non-translatable tech names)
 export const projectTags: Record<ProjectKey, string[]> = {
-  quillbotFlow: ["React", "TinyMCE", "AI"],
-  cms: ["Next.js", "SEO", "API"],
-  paraphrasingTool: ["React", "NLP", "UX"],
-  citationGenerator: ["Elasticsearch", "Apache Beam", "API"],
+  aiChat: ["Multi-Agent AI", "RAG", "TypeScript", "Python", "Vector DB", "GCP"],
+  quillbotFlow: ["React", "AI Integration", "TinyMCE", "Full Stack", "Real-time"],
+  chatPdf: ["RAG", "PDF Parsing", "AI", "React", "Node.js"],
+  multiSiteCms: ["Next.js", "Headless CMS", "SEO", "Multi-tenant", "Node.js"],
+  cms: ["Tina CMS", "Next.js", "SEO", "TypeScript", "Headless CMS"],
+  paraphrasingTool: ["NLP", "LLM", "React", "Node.js", "High Scale"],
+  citationGenerator: ["Elasticsearch", "Apache Beam", "Node.js", "React"],
+  grammarChecker: ["NLP", "ML/LLM", "React", "Node.js", "Real-time"],
+  speechToText: ["AI", "Speech Recognition", "Real-time", "Multilingual"],
+  textToSpeech: ["AI", "Voice Synthesis", "Audio Processing"],
+  imageToText: ["OCR", "AI", "Image Processing", "React"],
+  qrCodeGenerator: ["React", "Canvas", "Utility"],
+  wordCloud: ["Data Visualization", "React", "Canvas"],
   i18n: ["i18n", "React", "Localization"],
-  grammarChecker: ["React", "NLP", "UX"],
   bigData: ["Apache Beam", "Elasticsearch", "GCP"],
   ascendLos: ["Android", "React", "Node.js"],
-  aiChat: ["React", "LLM", "API"],
 };
 
 // Project categories (non-translatable category IDs)
 export const projectCategories: Record<ProjectKey, string[]> = {
+  aiChat: ["web", "ai"],
   quillbotFlow: ["web", "ai"],
+  chatPdf: ["web", "ai"],
+  multiSiteCms: ["web"],
   cms: ["web"],
   paraphrasingTool: ["web", "ai"],
   citationGenerator: ["web", "data"],
-  i18n: ["web"],
   grammarChecker: ["web", "ai"],
+  speechToText: ["web", "ai"],
+  textToSpeech: ["web", "ai"],
+  imageToText: ["web", "ai"],
+  qrCodeGenerator: ["web"],
+  wordCloud: ["web"],
+  i18n: ["web"],
   bigData: ["data"],
   ascendLos: ["web", "mobile"],
-  aiChat: ["web", "ai"],
 };
 
 // Experience company data (skills are non-translatable tech names)

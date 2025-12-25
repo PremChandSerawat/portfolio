@@ -20,6 +20,7 @@ export default function CompetencyCard({ title, competencies }: CompetencyCardPr
       elevation={0}
       sx={{
         flex: 1,
+        height: '100%',
         p: { xs: 2, md: 3 },
         borderRadius: 2,
         bgcolor: alpha(theme.palette.info.main, 0.05),

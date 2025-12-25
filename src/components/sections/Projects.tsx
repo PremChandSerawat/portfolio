@@ -50,18 +50,6 @@ export default function Projects() {
       {/* Section header */}
       <AnimatedElement variant="fadeInUp" duration={0.7}>
         <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <Typography
-            variant="overline"
-            sx={{
-              color: 'secondary.main',
-              fontWeight: 600,
-              letterSpacing: 3,
-              mb: 1,
-              display: 'block',
-            }}
-          >
-            {t('overline')}
-          </Typography>
           <SectionTitle sx={{ textAlign: 'center', mb: 2 }}>
             {t('title')}
           </SectionTitle>
@@ -142,21 +130,29 @@ export default function Projects() {
         </Typography>
       </AnimatedElement>
 
-      {/* Projects grid */}
+      {/* Projects list - full width cards */}
       <Box
         sx={{
-          display: 'grid',
-          gridTemplateColumns: {
-            xs: '1fr',
-            sm: 'repeat(2, 1fr)',
-            lg: 'repeat(3, 1fr)',
-          },
+          display: 'flex',
+          flexDirection: 'column',
           gap: 3,
         }}
       >
         {filteredProjectKeys.map((projectKey, index) => {
           const meta = projectMeta[projectKey];
-          const descriptions = t.raw(`items.${projectKey}.description`) as string[];
+          const projectData = t.raw(`items.${projectKey}`) as {
+            title: string;
+            subtitle?: string;
+            description: string[];
+            highlights?: string[];
+            agents?: string[];
+            patterns?: string[];
+            impact?: string[];
+            sites?: { name: string; url: string }[];
+          };
+          
+          // Check if this is a featured project (has detailed content)
+          const isFeatured = !!(projectData.highlights?.length || projectData.impact?.length || projectData.agents?.length || projectData.sites?.length);
           
           return (
             <AnimatedElement
@@ -167,12 +163,19 @@ export default function Projects() {
               delay={0.2}
             >
               <ProjectCard
-                title={t(`items.${projectKey}.title`)}
-                description={descriptions}
+                title={projectData.title}
+                subtitle={projectData.subtitle}
+                description={projectData.description}
+                highlights={projectData.highlights}
+                agents={projectData.agents}
+                patterns={projectData.patterns}
+                impact={projectData.impact}
+                sites={projectData.sites}
                 link={meta.link}
                 linkText={projectKey === 'ascendLos' ? t('items.ascendLos.linkText') : undefined}
                 linkIcon={meta.linkIcon}
-                isWide={false}
+                isWide={true}
+                isFeatured={isFeatured}
                 tags={projectTags[projectKey]}
                 index={index}
               />

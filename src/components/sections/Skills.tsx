@@ -51,7 +51,7 @@ export default function Skills() {
             variant="fadeInUp"
             staggerIndex={index}
             staggerDelay={0.1}
-            delay={0.1}
+            delay={0.05}
           >
             <Box sx={{ height: '100%' }}>
               <SkillCard title={t(`categories.${category.titleKey}`)} skills={category.data} />
@@ -65,10 +65,10 @@ export default function Skills() {
         spacing={3}
         sx={{ mt: 6, alignItems: 'stretch' }}
       >
-        <AnimatedElement variant="fadeInLeft" delay={0.3} sx={{ flex: 1, display: 'flex' }}>
+        <AnimatedElement variant="fadeInLeft" delay={0.1} sx={{ flex: 1, display: 'flex' }}>
           <CompetencyCard title={t('competencies.core')} competencies={coreCompetencies} />
         </AnimatedElement>
-        <AnimatedElement variant="fadeInRight" delay={0.4} sx={{ flex: 1, display: 'flex' }}>
+        <AnimatedElement variant="fadeInRight" delay={0.15} sx={{ flex: 1, display: 'flex' }}>
           <CompetencyCard title={t('competencies.soft')} competencies={softCompetencies} />
         </AnimatedElement>
       </Stack>

@@ -68,7 +68,7 @@ export default function Projects() {
       </AnimatedElement>
 
       {/* Category filters */}
-      <AnimatedElement variant="fadeIn" delay={0.2}>
+      <AnimatedElement variant="fadeIn" delay={0.1}>
         <Stack
           direction="row"
           spacing={1}
@@ -117,7 +117,7 @@ export default function Projects() {
       </AnimatedElement>
 
       {/* Projects count */}
-      <AnimatedElement variant="fadeIn" delay={0.3}>
+      <AnimatedElement variant="fadeIn" delay={0.15}>
         <Typography
           variant="body2"
           sx={{
@@ -160,7 +160,7 @@ export default function Projects() {
               variant="fadeInUp"
               staggerIndex={index}
               staggerDelay={0.1}
-              delay={0.2}
+              delay={0.1}
             >
               <ProjectCard
                 title={projectData.title}

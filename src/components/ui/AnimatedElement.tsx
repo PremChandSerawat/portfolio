@@ -44,71 +44,69 @@ const getAnimationStyles = (
   delay: number,
   easing: string
 ): { initial: CSSProperties; visible: CSSProperties } => {
-  const baseTransition = `all ${duration}s ${easing} ${delay}s`;
-
   const variants: Record<AnimationVariant, { initial: CSSProperties; visible: CSSProperties }> = {
     fadeIn: {
       initial: { opacity: 0 },
       visible: { opacity: 1 },
     },
     fadeInUp: {
-      initial: { opacity: 0, transform: 'translateY(40px)' },
+      initial: { opacity: 0, transform: 'translateY(20px)' },
       visible: { opacity: 1, transform: 'translateY(0)' },
     },
     fadeInDown: {
-      initial: { opacity: 0, transform: 'translateY(-40px)' },
+      initial: { opacity: 0, transform: 'translateY(-20px)' },
       visible: { opacity: 1, transform: 'translateY(0)' },
     },
     fadeInLeft: {
-      initial: { opacity: 0, transform: 'translateX(-40px)' },
+      initial: { opacity: 0, transform: 'translateX(-20px)' },
       visible: { opacity: 1, transform: 'translateX(0)' },
     },
     fadeInRight: {
-      initial: { opacity: 0, transform: 'translateX(40px)' },
+      initial: { opacity: 0, transform: 'translateX(20px)' },
       visible: { opacity: 1, transform: 'translateX(0)' },
     },
     scaleIn: {
-      initial: { opacity: 0, transform: 'scale(0.8)' },
+      initial: { opacity: 0, transform: 'scale(0.9)' },
       visible: { opacity: 1, transform: 'scale(1)' },
     },
     slideInUp: {
-      initial: { opacity: 0, transform: 'translateY(80px)' },
+      initial: { opacity: 0, transform: 'translateY(40px)' },
       visible: { opacity: 1, transform: 'translateY(0)' },
     },
     slideInDown: {
-      initial: { opacity: 0, transform: 'translateY(-80px)' },
+      initial: { opacity: 0, transform: 'translateY(-40px)' },
       visible: { opacity: 1, transform: 'translateY(0)' },
     },
     slideInLeft: {
-      initial: { opacity: 0, transform: 'translateX(-80px)' },
+      initial: { opacity: 0, transform: 'translateX(-40px)' },
       visible: { opacity: 1, transform: 'translateX(0)' },
     },
     slideInRight: {
-      initial: { opacity: 0, transform: 'translateX(80px)' },
+      initial: { opacity: 0, transform: 'translateX(40px)' },
       visible: { opacity: 1, transform: 'translateX(0)' },
     },
     rotateIn: {
-      initial: { opacity: 0, transform: 'rotate(-15deg) scale(0.9)' },
+      initial: { opacity: 0, transform: 'rotate(-10deg) scale(0.95)' },
       visible: { opacity: 1, transform: 'rotate(0) scale(1)' },
     },
     bounceIn: {
-      initial: { opacity: 0, transform: 'scale(0.3)' },
-      visible: { opacity: 1, transform: 'scale(1)' },
-    },
-    flipInX: {
-      initial: { opacity: 0, transform: 'perspective(400px) rotateX(90deg)' },
-      visible: { opacity: 1, transform: 'perspective(400px) rotateX(0)' },
-    },
-    flipInY: {
-      initial: { opacity: 0, transform: 'perspective(400px) rotateY(90deg)' },
-      visible: { opacity: 1, transform: 'perspective(400px) rotateY(0)' },
-    },
-    zoomIn: {
       initial: { opacity: 0, transform: 'scale(0.5)' },
       visible: { opacity: 1, transform: 'scale(1)' },
     },
+    flipInX: {
+      initial: { opacity: 0, transform: 'perspective(400px) rotateX(45deg)' },
+      visible: { opacity: 1, transform: 'perspective(400px) rotateX(0)' },
+    },
+    flipInY: {
+      initial: { opacity: 0, transform: 'perspective(400px) rotateY(45deg)' },
+      visible: { opacity: 1, transform: 'perspective(400px) rotateY(0)' },
+    },
+    zoomIn: {
+      initial: { opacity: 0, transform: 'scale(0.7)' },
+      visible: { opacity: 1, transform: 'scale(1)' },
+    },
     blurIn: {
-      initial: { opacity: 0, filter: 'blur(10px)', transform: 'translateY(20px)' },
+      initial: { opacity: 0, filter: 'blur(6px)', transform: 'translateY(10px)' },
       visible: { opacity: 1, filter: 'blur(0px)', transform: 'translateY(0)' },
     },
   };
@@ -120,15 +118,15 @@ export default function AnimatedElement({
   children,
   variant = 'fadeInUp',
   delay = 0,
-  duration = 0.6,
+  duration = 0.35,
   sx,
-  threshold = 0.1,
-  rootMargin = '0px 0px -50px 0px',
+  threshold = 0.05,
+  rootMargin = '0px 0px -20px 0px',
   triggerOnce = true,
   component = 'div',
-  easing = 'cubic-bezier(0.16, 1, 0.3, 1)',
+  easing = 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   staggerIndex = 0,
-  staggerDelay = 0.1,
+  staggerDelay = 0.05,
 }: AnimatedElementProps) {
   const [ref, isVisible] = useScrollAnimation<HTMLDivElement>({
     threshold,

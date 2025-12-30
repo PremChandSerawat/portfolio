@@ -41,24 +41,20 @@
       "gcp": "GCP",
       "postgresql": "PostgreSQL",
       "typescript": "TypeScript",
-      "mongodb": "MongoDB"
+      "mongodb": "MongoDB",
+      "langchain": "LangChain",
+      "openai": "OpenAI",
+      "rag": "RAG",
+      "fastapi": "FastAPI",
+      "redis": "Redis",
+      "kubernetes": "K8s"
     }
   },
   "about": {
     "title": "About Me",
-    "greeting": "Hi, I'm Prem!",
-    "subtitle": "Full Stack Engineer • AI Product Builder",
-    "intro": "I'm a passionate",
-    "role": "Full Stack & Applied AI Engineer",
-    "withExperience": "with",
-    "yearsExperience": "6+ years",
-    "ofExperience": "of experience building AI-powered products used by millions.",
-    "fromLaunching": "At QuillBot, I've built",
-    "loanPlatforms": "AI Chat, Flow, Paraphrasing & Grammar tools",
-    "toDeveloping": "— from architecting",
-    "aiTools": "multi-agent AI systems to optimizing LLM inference costs by 70%",
-    "prideBuildingSolutions": "I take pride in shipping products that drive real user impact.",
-    "recentFocus": "Currently focused on Agentic AI, LangGraph, and building autonomous AI systems. Previously shipped Loan Origination platforms at Ascend Capital. Let's build something impactful!",
+    "subtitle": "My Journey & Expertise",
+    "introParagraph": "With 6+ years of hands-on experience, I specialize in building AI-powered products that scale to millions of users. At QuillBot, I've architected multi-agent AI systems, built end-to-end SaaS products, and optimized LLM inference costs by 70%.",
+    "secondParagraph": "From launching AI Chat & Flow to processing 160M+ records for search pipelines, I thrive at the intersection of full-stack development and applied AI. Currently exploring Agentic AI and autonomous systems.",
     "values": {
       "cleanCode": "Clean, efficient code",
       "teamwork": "Collaborative teamwork",
@@ -157,27 +153,6 @@
           "Enhanced user engagement and retention with intuitive end-to-end writing workflow"
         ]
       },
-      "cms": {
-        "title": "Tina CMS",
-        "subtitle": "SEO-Driven Content Management Platform",
-        "description": [
-          "Tina CMS is a modern, SEO-focused content management system designed to enable rapid creation, management, and publishing of high-performance web pages with minimal engineering effort.",
-          "Designed and developed a scalable, SEO-first CMS architecture that significantly reduced engineering dependency for content creation and page updates.",
-          "The platform empowers non-technical teams to manage content independently while ensuring scalability, performance, and search engine optimization best practices."
-        ],
-        "highlights": [
-          "Implemented dynamic page generation and content-driven routing for rapid publishing without code changes",
-          "Built flexible content schemas and reusable components for efficient page composition with brand consistency",
-          "Integrated on-page SEO controls including metadata management, structured data, and search-friendly URLs",
-          "Optimized page load performance and rendering strategies for improved Core Web Vitals",
-          "Developed editor-friendly workflows and preview environments for safe content iteration"
-        ],
-        "impact": [
-          "Reduced page development effort by ~80%, enabling faster go-to-market",
-          "Improved SEO performance and organic traffic through optimized page structures",
-          "Empowered non-engineering teams to publish content independently"
-        ]
-      },
       "paraphrasingTool": {
         "title": "Paraphrasing Tool",
         "subtitle": "AI-Powered Writing Enhancement",
@@ -220,13 +195,13 @@
           "Delivered a scalable system handling large volumes of concurrent requests"
         ]
       },
-      "multiSiteCms": {
+      "cmsMultiSite": {
         "title": "Multi-Site CMS Platform",
-        "subtitle": "Unified Content Management for Multiple Websites",
+        "subtitle": "SEO-Driven Headless CMS for Multiple Websites",
         "description": [
-          "Designed and developed a unified CMS platform powering multiple high-traffic websites from a single codebase with complete frontend UI and backend infrastructure.",
-          "Built multi-tenant architecture enabling rapid deployment of new sites with shared components, consistent branding, and centralized content management.",
-          "The platform allows efficient scaling, reduced maintenance overhead, and seamless feature rollouts across all properties."
+          "Designed and developed a unified CMS platform using Tina CMS and Next.js, powering multiple high-traffic websites from a single codebase with complete frontend UI and backend infrastructure.",
+          "Built multi-tenant architecture with SEO-first approach, enabling rapid deployment of new sites with shared components, consistent branding, and centralized content management.",
+          "The platform empowers non-technical teams to manage content independently while ensuring scalability, performance, and search engine optimization best practices."
         ],
         "sites": [
           { "name": "Spinbot.com", "url": "https://spinbot.com" },
@@ -236,15 +211,15 @@
         ],
         "highlights": [
           "Architected multi-tenant CMS supporting 4+ production websites from single codebase",
-          "Built reusable UI component library ensuring consistent design across all sites",
-          "Implemented centralized backend APIs serving multiple frontends efficiently",
-          "Developed SEO-optimized page templates achieving high organic search rankings",
+          "Built flexible content schemas and reusable components for efficient page composition",
+          "Integrated on-page SEO controls including metadata management and structured data",
+          "Optimized page load performance for improved Core Web Vitals across all sites",
           "Created admin dashboard for unified content and configuration management"
         ],
         "impact": [
-          "Reduced development and maintenance effort by 70% through code reuse",
+          "Reduced page development effort by ~80%, enabling faster go-to-market",
           "Enabled rapid deployment of new sites in days instead of months",
-          "Achieved consistent user experience across all platform properties"
+          "Improved SEO performance and organic traffic through optimized page structures"
         ]
       },
       "chatPdf": {

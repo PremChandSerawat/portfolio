@@ -23,7 +23,7 @@ export default function Contact() {
         <SectionTitle>{t('title')}</SectionTitle>
       </AnimatedElement>
 
-      <AnimatedElement variant="fadeInUp" delay={0.15}>
+      <AnimatedElement variant="fadeInUp" delay={0.05}>
         <Paper
           elevation={0}
           sx={{
@@ -35,7 +35,7 @@ export default function Contact() {
           }}
         >
           <Stack spacing={3}>
-            <AnimatedElement variant="fadeInLeft" delay={0.2}>
+            <AnimatedElement variant="fadeInLeft" delay={0.08}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <EmailIcon sx={{ color: 'primary.main', fontSize: 24 }} />
                 <Box>
@@ -53,7 +53,7 @@ export default function Contact() {
               </Box>
             </AnimatedElement>
 
-            <AnimatedElement variant="fadeInLeft" delay={0.3}>
+            <AnimatedElement variant="fadeInLeft" delay={0.1}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <PhoneIcon sx={{ color: 'primary.main', fontSize: 24 }} />
                 <Box>
@@ -71,7 +71,7 @@ export default function Contact() {
               </Box>
             </AnimatedElement>
 
-            <AnimatedElement variant="fadeInLeft" delay={0.4}>
+            <AnimatedElement variant="fadeInLeft" delay={0.12}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <LocationOnIcon sx={{ color: 'primary.main', fontSize: 24 }} />
                 <Box>
@@ -85,7 +85,7 @@ export default function Contact() {
               </Box>
             </AnimatedElement>
 
-            <AnimatedElement variant="fadeInUp" delay={0.5}>
+            <AnimatedElement variant="fadeInUp" delay={0.15}>
               <Box sx={{ pt: 2 }}>
                 <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1.5 }}>
                   {t('connectWithMe')}
@@ -101,7 +101,7 @@ export default function Contact() {
                       variant="bounceIn"
                       staggerIndex={index}
                       staggerDelay={0.1}
-                      delay={0.6}
+                      delay={0.18}
                     >
                       <IconButton
                         href={social.href}

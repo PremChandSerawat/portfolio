@@ -39,7 +39,7 @@ export default function Education() {
               variant="flipInY"
               staggerIndex={index}
               staggerDelay={0.15}
-              delay={0.1}
+              delay={0.05}
             >
               <Paper
                 elevation={0}
@@ -165,7 +165,7 @@ export default function Education() {
       </Box>
 
       {/* Certifications */}
-      <AnimatedElement variant="fadeInUp" delay={0.4}>
+      <AnimatedElement variant="fadeInUp" delay={0.15}>
         <Paper
           elevation={0}
           sx={(theme: Theme) => {
@@ -220,7 +220,7 @@ export default function Education() {
                 variant="scaleIn"
                 staggerIndex={index}
                 staggerDelay={0.1}
-                delay={0.5}
+                delay={0.2}
               >
                 <MuiLink
                   href={certificationLinks[certKey]}

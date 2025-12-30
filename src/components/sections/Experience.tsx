@@ -49,7 +49,7 @@ export default function Experience() {
               variant={index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'}
               staggerIndex={index}
               staggerDelay={0.15}
-              delay={0.1}
+              delay={0.05}
             >
               <Box
                 sx={(theme: Theme) => {
@@ -199,7 +199,7 @@ export default function Experience() {
       </Box>
 
       {/* Career Highlights */}
-      <AnimatedElement variant="fadeInUp" delay={0.4}>
+      <AnimatedElement variant="fadeInUp" delay={0.15}>
         <Box
           sx={(theme: Theme) => ({
             mt: { xs: 4, md: 6 },
@@ -241,7 +241,7 @@ export default function Experience() {
                 variant="bounceIn"
                 staggerIndex={index}
                 staggerDelay={0.1}
-                delay={0.5}
+                delay={0.2}
               >
                 <Stack
                   direction={{ xs: 'column', sm: 'row' }}

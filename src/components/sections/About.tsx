@@ -55,277 +55,162 @@ export default function About() {
         <SectionTitle>{t('title')}</SectionTitle>
       </AnimatedElement>
 
-      {/* Main content grid */}
+      {/* Intro Section */}
+      <AnimatedElement variant="fadeInUp" delay={0.05} duration={0.4}>
+        <Box sx={{ mt: { xs: 3, md: 4 } }}>
+          <Typography 
+            variant="subtitle1" 
+            sx={{ 
+              color: 'primary.main', 
+              fontWeight: 600, 
+              mb: 2,
+              textTransform: 'uppercase',
+              letterSpacing: 1,
+              fontSize: '0.85rem',
+            }}
+          >
+            {t('subtitle')}
+          </Typography>
+          <Typography
+            sx={{
+              color: 'text.secondary',
+              fontSize: { xs: '1rem', md: '1.1rem' },
+              lineHeight: 1.8,
+              mb: 2,
+            }}
+          >
+            {t('introParagraph')}
+          </Typography>
+          <Typography
+            sx={{
+              color: 'text.secondary',
+              fontSize: { xs: '1rem', md: '1.1rem' },
+              lineHeight: 1.8,
+              mb: 3,
+            }}
+          >
+            {t('secondParagraph')}
+          </Typography>
+
+          {/* Values pills */}
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+            {valueKeys.map((key, index) => (
+              <Box
+                key={index}
+                sx={(theme: Theme) => {
+                  const isDark = theme.palette.mode === 'dark';
+                  return {
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 0.75,
+                    px: 2,
+                    py: 0.75,
+                    borderRadius: 2,
+                    background: alpha(theme.palette.primary.main, isDark ? 0.1 : 0.08),
+                    border: `1px solid ${alpha(theme.palette.primary.main, 0.15)}`,
+                    fontSize: '0.85rem',
+                    color: 'text.primary',
+                    fontWeight: 500,
+                  };
+                }}
+              >
+                <span>{valueIcons[index]}</span>
+                {t(`values.${key}`)}
+              </Box>
+            ))}
+          </Box>
+        </Box>
+      </AnimatedElement>
+
+      {/* Highlight Cards - 2x3 Grid */}
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: { xs: '1fr', lg: '1.2fr 1fr' },
-          gap: { xs: 3, md: 6 },
-          mt: { xs: 3, md: 4 },
+          gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
+          gap: { xs: 2, md: 2.5 },
+          mt: { xs: 4, md: 5 },
         }}
       >
-        {/* Left: Story Card */}
-        <AnimatedElement variant="fadeInLeft" delay={0.1} duration={0.8}>
-          <Paper
-            elevation={0}
-            sx={(theme: Theme) => {
-              const isDark = theme.palette.mode === 'dark';
-              return {
-                p: { xs: 3, md: 4 },
-                borderRadius: 4,
-                background: isDark
-                  ? theme.palette.backgrounds.violetAzureAlpha
-                  : theme.palette.background.paper,
-                backdropFilter: 'blur(20px)',
-                border: `1px solid ${alpha(theme.palette.primary.main, isDark ? 0.1 : 0.08)}`,
-                position: 'relative',
-                overflow: 'hidden',
-                boxShadow: isDark
-                  ? `0 8px 32px ${alpha('#000', 0.3)}`
-                  : `0 8px 32px ${alpha(theme.palette.primary.main, 0.08)}`,
-                height: '100%',
-              };
-            }}
-          >
-            {/* Decorative corner accent */}
-            <Box
-              sx={(theme: Theme) => ({
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: 80,
-                height: 80,
-                background: theme.palette.backgrounds.orbVioletLight,
-                borderRadius: '0 0 100% 0',
-              })}
-            />
-
-            <Stack spacing={3}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        {highlightKeys.map((key, index) => {
+          const IconComponent = highlightIcons[index];
+          const color = highlightColors[index];
+          return (
+            <AnimatedElement
+              key={index}
+              variant="fadeInUp"
+              staggerIndex={index}
+              staggerDelay={0.04}
+              delay={0.1}
+            >
+              <Paper
+                elevation={0}
+                sx={(theme: Theme) => {
+                  const isDark = theme.palette.mode === 'dark';
+                  return {
+                    p: { xs: 2, md: 2.5 },
+                    borderRadius: 3,
+                    background: isDark
+                      ? alpha(theme.palette.background.paper, 0.5)
+                      : theme.palette.background.paper,
+                    border: `1px solid ${alpha(color, isDark ? 0.2 : 0.15)}`,
+                    transition: 'all 0.3s ease',
+                    cursor: 'default',
+                    height: '100%',
+                    boxShadow: isDark ? 'none' : `0 4px 20px ${alpha(color, 0.08)}`,
+                    '&:hover': {
+                      transform: 'translateY(-4px)',
+                      borderColor: alpha(color, 0.4),
+                      boxShadow: `0 8px 30px ${alpha(color, isDark ? 0.15 : 0.12)}`,
+                      '& .highlight-icon': {
+                        transform: 'scale(1.1)',
+                      },
+                    },
+                  };
+                }}
+              >
                 <Box
-                  sx={(theme: Theme) => ({
-                    width: 48,
-                    height: 48,
-                    borderRadius: 2,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    background: theme.palette.backgrounds.violetAzure,
-                    fontSize: '1.5rem',
-                  })}
-                >
-                  👨‍💻
-                </Box>
-                <Box>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      fontWeight: 700,
-                      color: 'text.primary',
-                    }}
-                  >
-                    {t('greeting')}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    {t('subtitle')}
-                  </Typography>
-                </Box>
-              </Box>
-
-              <Typography
-                variant="body1"
-                sx={{
-                  color: 'text.secondary',
-                  fontSize: { xs: '0.95rem', md: '1.05rem' },
-                  lineHeight: 1.8,
-                }}
-              >
-                {t('intro')} <Box component="span" sx={{ color: 'primary.main', fontWeight: 600 }}>{t('role')}</Box> {t('withExperience')}
-                {' '}<Box component="span" sx={{ color: 'secondary.main', fontWeight: 600 }}>{t('yearsExperience')}</Box> {t('ofExperience')}
-              </Typography>
-
-              <Typography
-                variant="body1"
-                sx={{
-                  color: 'text.secondary',
-                  fontSize: { xs: '0.95rem', md: '1.05rem' },
-                  lineHeight: 1.8,
-                }}
-              >
-                {t('fromLaunching')} <Box component="span" sx={{ color: 'warning.main', fontWeight: 500 }}>{t('loanPlatforms')}</Box> {t('toDeveloping')}
-                {' '}<Box component="span" sx={{ color: 'info.main', fontWeight: 500 }}>{t('aiTools')}</Box>, 
-                {' '}{t('prideBuildingSolutions')}
-              </Typography>
-
-              <Typography
-                variant="body1"
-                sx={{
-                  color: 'text.secondary',
-                  fontSize: { xs: '0.95rem', md: '1.05rem' },
-                  lineHeight: 1.8,
-                }}
-              >
-                {t('recentFocus')}
-              </Typography>
-
-              {/* Values pills */}
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: { xs: 1, md: 1.5 },
-                  mt: 1,
-                }}
-              >
-                {valueKeys.map((key, index) => (
-                  <AnimatedElement
-                    key={index}
-                    variant="scaleIn"
-                    staggerIndex={index}
-                    staggerDelay={0.08}
-                    delay={0.4}
-                  >
-                    <Box
-                      sx={(theme: Theme) => {
-                        const isDark = theme.palette.mode === 'dark';
-                        return {
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: 1,
-                          px: 2,
-                          py: 0.75,
-                          borderRadius: 2,
-                          background: alpha(theme.palette.primary.main, isDark ? 0.1 : 0.08),
-                          border: `1px solid ${alpha(theme.palette.primary.main, 0.15)}`,
-                          fontSize: '0.85rem',
-                          color: 'text.primary',
-                          fontWeight: 500,
-                        };
-                      }}
-                    >
-                      <span>{valueIcons[index]}</span>
-                      {t(`values.${key}`)}
-                    </Box>
-                  </AnimatedElement>
-                ))}
-              </Box>
-            </Stack>
-          </Paper>
-        </AnimatedElement>
-
-        {/* Right: Highlight Cards */}
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
-          }}
-        >
-          {highlightKeys.map((key, index) => {
-            const IconComponent = highlightIcons[index];
-            const color = highlightColors[index];
-            return (
-              <AnimatedElement
-                key={index}
-                variant="fadeInUp"
-                staggerIndex={index}
-                staggerDelay={0.12}
-                delay={0.2}
-              >
-                <Paper
-                  elevation={0}
+                  className="highlight-icon"
                   sx={(theme: Theme) => {
                     const isDark = theme.palette.mode === 'dark';
                     return {
-                      p: { xs: 2, md: 2.5 },
-                      borderRadius: 3,
-                      background: isDark
-                        ? alpha(theme.palette.background.paper, 0.5)
-                        : theme.palette.background.paper,
-                      border: `1px solid ${alpha(color, isDark ? 0.2 : 0.15)}`,
-                      transition: 'all 0.3s ease',
-                      cursor: 'default',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      boxShadow: isDark
-                        ? 'none'
-                        : `0 4px 20px ${alpha(color, 0.08)}`,
-                      '&:hover': {
-                        transform: 'translateY(-4px)',
-                        borderColor: alpha(color, 0.4),
-                        boxShadow: `0 8px 30px ${alpha(color, isDark ? 0.15 : 0.12)}`,
-                        '& .highlight-icon': {
-                          transform: 'scale(1.1) rotate(-5deg)',
-                        },
-                      },
+                      width: 44,
+                      height: 44,
+                      borderRadius: 2,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: alpha(color, isDark ? 0.15 : 0.1),
+                      transition: 'transform 0.3s ease',
+                      mb: 1.5,
                     };
                   }}
                 >
-                  {/* Gradient corner */}
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      top: 0,
-                      right: 0,
-                      width: 80,
-                      height: 80,
-                      background: `linear-gradient(225deg, ${alpha(color, 0.12)} 0%, transparent 60%)`,
-                      borderRadius: '0 0 0 100%',
-                    }}
-                  />
-
-                  <Stack direction="row" spacing={2} alignItems="center">
-                    <Box
-                      className="highlight-icon"
-                      sx={(theme: Theme) => {
-                        const isDark = theme.palette.mode === 'dark';
-                        return {
-                          width: 48,
-                          height: 48,
-                          borderRadius: 2.5,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          background: alpha(color, isDark ? 0.15 : 0.1),
-                          transition: 'transform 0.3s ease',
-                          flexShrink: 0,
-                        };
-                      }}
-                    >
-                      <IconComponent sx={{ color: color, fontSize: 26 }} />
-                    </Box>
-
-                    <Box sx={{ flex: 1 }}>
-                      <Typography
-                        variant="subtitle1"
-                        sx={{
-                          fontWeight: 700,
-                          color: 'text.primary',
-                          fontSize: '1rem',
-                          lineHeight: 1.3,
-                          mb: 0.5,
-                        }}
-                      >
-                        {t(`highlights.${key}.title`)}
-                      </Typography>
-
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: 'text.secondary',
-                          lineHeight: 1.6,
-                          fontSize: '0.875rem',
-                        }}
-                      >
-                        {t(`highlights.${key}.description`)}
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </Paper>
-              </AnimatedElement>
-            );
-          })}
-        </Box>
+                  <IconComponent sx={{ color: color, fontSize: 24 }} />
+                </Box>
+                <Typography
+                  sx={{
+                    fontWeight: 700,
+                    color: 'text.primary',
+                    fontSize: '0.95rem',
+                    lineHeight: 1.3,
+                    mb: 0.75,
+                  }}
+                >
+                  {t(`highlights.${key}.title`)}
+                </Typography>
+                <Typography
+                  sx={{
+                    color: 'text.secondary',
+                    lineHeight: 1.6,
+                    fontSize: '0.85rem',
+                  }}
+                >
+                  {t(`highlights.${key}.description`)}
+                </Typography>
+              </Paper>
+            </AnimatedElement>
+          );
+        })}
       </Box>
 
       {/* Bottom stats/CTA row */}
@@ -337,7 +222,7 @@ export default function About() {
         }}
       >
         {/* CTA Banner */}
-        <AnimatedElement variant="fadeInUp" delay={0.3}>
+        <AnimatedElement variant="fadeInUp" delay={0.1}>
           <Box
             sx={(theme: Theme) => {
               const isDark = theme.palette.mode === 'dark';
@@ -453,8 +338,8 @@ function StatsGrid() {
           key={index}
           variant="scaleIn"
           staggerIndex={index}
-          staggerDelay={0.15}
-          delay={0.4}
+          staggerDelay={0.06}
+          delay={0.15}
         >
           <Paper
             elevation={0}

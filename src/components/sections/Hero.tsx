@@ -91,7 +91,7 @@ export default function Hero() {
         {/* Left content */}
         <Box sx={{ flex: 1, textAlign: { xs: 'center', lg: 'left' } }}>
           {/* Status chip */}
-          <AnimatedElement variant="fadeInDown" delay={0.2} duration={0.8} triggerOnce>
+          <AnimatedElement variant="fadeInDown" delay={0.1} duration={0.4} triggerOnce>
             <Chip
               label={t('availableStatus')}
               sx={(theme: Theme) => ({
@@ -118,7 +118,7 @@ export default function Hero() {
           </AnimatedElement>
 
           {/* Main heading */}
-          <AnimatedElement variant="fadeInUp" delay={0.3} duration={0.9} triggerOnce>
+          <AnimatedElement variant="fadeInUp" delay={0.15} duration={0.4} triggerOnce>
             <Typography
               variant="h1"
               sx={{
@@ -172,7 +172,7 @@ export default function Hero() {
           </AnimatedElement>
 
           {/* Role */}
-          <AnimatedElement variant="fadeInUp" delay={0.45} duration={0.8} triggerOnce>
+          <AnimatedElement variant="fadeInUp" delay={0.2} duration={0.4} triggerOnce>
             <Typography
               variant="h4"
               sx={{
@@ -191,7 +191,7 @@ export default function Hero() {
           </AnimatedElement>
 
           {/* Tagline */}
-          <AnimatedElement variant="fadeInUp" delay={0.55} duration={0.8} triggerOnce>
+          <AnimatedElement variant="fadeInUp" delay={0.25} duration={0.4} triggerOnce>
             <Typography
               variant="h5"
               sx={{
@@ -295,7 +295,7 @@ export default function Hero() {
           </AnimatedElement>
 
           {/* CTA Buttons */}
-          <AnimatedElement variant="fadeInUp" delay={0.65} duration={0.8} triggerOnce>
+          <AnimatedElement variant="fadeInUp" delay={0.3} duration={0.4} triggerOnce>
             <Stack
               direction={{ xs: 'column', sm: 'row' }}
               spacing={2}
@@ -370,7 +370,7 @@ export default function Hero() {
           </AnimatedElement>
 
           {/* Social links */}
-          <AnimatedElement variant="fadeInUp" delay={0.75} duration={0.8} triggerOnce>
+          <AnimatedElement variant="fadeInUp" delay={0.35} duration={0.4} triggerOnce>
             <Stack
               direction="row"
               spacing={1.5}
@@ -413,111 +413,74 @@ export default function Hero() {
 
         </Box>
 
-        {/* Visual element - responsive for both mobile and desktop */}
+        {/* Visual element - Skills Marquee */}
         <AnimatedElement
           variant="fadeInUp"
-          delay={0.5}
-          duration={1}
+          delay={0.2}
+          duration={0.5}
           triggerOnce
           sx={{
             flex: { xs: 'none', lg: 1 },
             display: 'flex',
+            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             position: 'relative',
             mt: { xs: 4, lg: 0 },
+            width: { xs: '100%', lg: 'auto' },
+            maxWidth: { xs: 340, sm: 400, lg: 480 },
+            gap: 2,
           }}
         >
-          {/* Tech stack floating cards */}
+          {/* Skills Marquee Display */}
+          <TechMarquee />
+
+          {/* Center experience badge */}
           <Box
-            sx={{
-              position: 'relative',
-              width: { xs: 280, sm: 320, lg: 400 },
-              height: { xs: 280, sm: 320, lg: 400 },
-            }}
+            sx={(theme: Theme) => ({
+              mt: 3,
+              px: 4,
+              py: 2,
+              borderRadius: 3,
+              bgcolor: theme.palette.mode === 'dark' ? alpha(theme.palette.background.paper, 0.9) : 'background.paper',
+              boxShadow: `0 8px 32px ${alpha(theme.palette.secondary.main, 0.15)}`,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 2,
+              border: `1px solid ${alpha(theme.palette.secondary.main, 0.2)}`,
+            })}
           >
-            {/* Central gradient circle */}
-            <Box
+            <Typography
               sx={(theme: Theme) => ({
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: { xs: 180, sm: 220, lg: 280 },
-                height: { xs: 180, sm: 220, lg: 280 },
-                borderRadius: '50%',
-                background: theme.palette.backgrounds.conicSpinner,
-                animation: 'spin 20s linear infinite',
-                '@keyframes spin': {
-                  '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
-                  '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
-                },
-              })}
-            />
-
-            {/* Tech badges floating around */}
-            <TechBadges />
-
-            {/* Center experience badge */}
-            <Box
-              sx={(theme: Theme) => ({
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: { xs: 100, sm: 120, lg: 140 },
-                height: { xs: 100, sm: 120, lg: 140 },
-                borderRadius: '50%',
-                bgcolor: theme.palette.mode === 'dark' ? alpha(theme.palette.background.paper, 0.95) : 'background.paper',
-                boxShadow: `0 8px 32px ${alpha(theme.palette.secondary.main, 0.2)}`,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: `2px solid ${alpha(theme.palette.secondary.main, 0.3)}`,
-                animation: 'centerBadgePulse 4s ease-in-out infinite',
-                '@keyframes centerBadgePulse': {
-                  '0%, 100%': { 
-                    transform: 'translate(-50%, -50%) scale(1)',
-                    boxShadow: `0 8px 32px ${alpha(theme.palette.secondary.main, 0.2)}`,
-                  },
-                  '50%': { 
-                    transform: 'translate(-50%, -50%) scale(1.05)',
-                    boxShadow: `0 12px 40px ${alpha(theme.palette.secondary.main, 0.35)}`,
-                  },
-                },
+                fontSize: { xs: '2rem', sm: '2.5rem' },
+                fontWeight: 800,
+                background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.info.main})`,
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                lineHeight: 1,
               })}
             >
-              <Typography
-                sx={(theme: Theme) => ({
-                  fontSize: { xs: '1.75rem', sm: '2rem', lg: '2.5rem' },
-                  fontWeight: 800,
-                  background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.info.main}, ${theme.palette.secondary.main})`,
-                  backgroundSize: '200% 100%',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  lineHeight: 1,
-                  animation: 'textShimmer 3s ease-in-out infinite',
-                  '@keyframes textShimmer': {
-                    '0%': { backgroundPosition: '0% 50%' },
-                    '50%': { backgroundPosition: '100% 50%' },
-                    '100%': { backgroundPosition: '0% 50%' },
-                  },
-                })}
-              >
-                6+
-              </Typography>
+              6+
+            </Typography>
+            <Box>
               <Typography
                 sx={{
-                  fontSize: { xs: '0.6rem', sm: '0.7rem', lg: '0.75rem' },
+                  fontSize: { xs: '0.75rem', sm: '0.85rem' },
                   fontWeight: 600,
-                  color: 'text.secondary',
-                  textTransform: 'uppercase',
-                  letterSpacing: 1,
+                  color: 'text.primary',
+                  lineHeight: 1.2,
                 }}
               >
                 {t('yearsExp')}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: '0.65rem', sm: '0.75rem' },
+                  color: 'text.secondary',
+                }}
+              >
+                Full Stack & AI
               </Typography>
             </Box>
           </Box>
@@ -527,130 +490,138 @@ export default function Hero() {
   );
 }
 
-function TechBadges() {
+function TechMarquee() {
   const t = useTranslations('hero.techBadges');
-  
-  // 10 items with unique floating patterns
-  const techStack = [
-    { labelKey: 'react', top: '5%', left: '50%', floatType: 1, duration: 5, delay: 0, color: '#61DAFB' },
-    { labelKey: 'nextjs', top: '15%', left: '78%', floatType: 2, duration: 6, delay: 0.3, colorKey: 'dynamic' },
-    { labelKey: 'nodejs', top: '38%', left: '92%', floatType: 3, duration: 5.5, delay: 0.6, color: '#339933' },
-    { labelKey: 'python', top: '65%', left: '88%', floatType: 4, duration: 6.5, delay: 0.9, color: '#3776AB' },
-    { labelKey: 'aws', top: '85%', left: '72%', floatType: 5, duration: 5, delay: 1.2, color: '#FF9900' },
-    { labelKey: 'docker', top: '95%', left: '50%', floatType: 1, duration: 6, delay: 1.5, color: '#2496ED' },
-    { labelKey: 'gcp', top: '85%', left: '28%', floatType: 2, duration: 5.5, delay: 1.8, color: '#4285F4' },
-    { labelKey: 'postgresql', top: '65%', left: '12%', floatType: 3, duration: 6, delay: 2.1, color: '#336791' },
-    { labelKey: 'typescript', top: '38%', left: '8%', floatType: 4, duration: 5.5, delay: 2.4, color: '#3178C6' },
-    { labelKey: 'mongodb', top: '15%', left: '22%', floatType: 5, duration: 6.5, delay: 2.7, color: '#47A248' },
+
+  // All 16 skills split into 3 rows
+  const row1 = [
+    { labelKey: 'react', color: '#61DAFB' },
+    { labelKey: 'nextjs', colorKey: 'dynamic' },
+    { labelKey: 'typescript', color: '#3178C6' },
+    { labelKey: 'nodejs', color: '#339933' },
+    { labelKey: 'python', color: '#3776AB' },
+    { labelKey: 'fastapi', color: '#009688' },
+  ];
+
+  const row2 = [
+    { labelKey: 'openai', color: '#10a37f' },
+    { labelKey: 'langchain', color: '#2dd4bf' },
+    { labelKey: 'rag', color: '#8b5cf6' },
+    { labelKey: 'aws', color: '#FF9900' },
+    { labelKey: 'docker', color: '#2496ED' },
+  ];
+
+  const row3 = [
+    { labelKey: 'gcp', color: '#4285F4' },
+    { labelKey: 'postgresql', color: '#336791' },
+    { labelKey: 'mongodb', color: '#47A248' },
+    { labelKey: 'redis', color: '#d82c20' },
+    { labelKey: 'kubernetes', color: '#326ce5' },
   ];
 
   return (
-    <>
-      {techStack.map((tech, index) => (
-        <Box
-          key={index}
-          sx={(theme: Theme) => {
-            const isDark = theme.palette.mode === 'dark';
-            const techColor = tech.colorKey === 'dynamic' ? (isDark ? '#fff' : '#000') : tech.color;
-            const floatAnim = `float${tech.floatType}`;
-            
-            return {
-              position: 'absolute',
-              top: tech.top,
-              left: tech.left,
-              transform: 'translate(-50%, -50%)',
-              px: { xs: 1, sm: 1.5, lg: 2 },
-              py: { xs: 0.5, sm: 0.75, lg: 1 },
-              bgcolor: isDark ? alpha(theme.palette.background.paper, 0.95) : 'background.paper',
-              borderRadius: { xs: 1.5, lg: 2 },
-              boxShadow: `0 4px 20px ${alpha(theme.palette.text.primary, 0.1)}`,
-              border: `1px solid ${alpha(techColor!, 0.3)}`,
-              animation: `fadeInBadge 0.8s ease-out forwards, ${floatAnim} ${tech.duration}s ease-in-out infinite, glowPulse 4s ease-in-out infinite`,
-              animationDelay: `${tech.delay}s, ${tech.delay}s, ${tech.delay * 0.5}s`,
-              opacity: 0,
-              cursor: 'pointer',
-              transition: 'box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease',
-              
-              // Fade in with pop
-              '@keyframes fadeInBadge': {
-                '0%': { opacity: 0, transform: 'translate(-50%, -50%) scale(0.5)' },
-                '70%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1.05)' },
-                '100%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
-              },
-              
-              // Float pattern 1 - gentle vertical
-              '@keyframes float1': {
-                '0%, 100%': { transform: 'translate(-50%, -50%)' },
-                '50%': { transform: 'translate(-50%, calc(-50% - 10px))' },
-              },
-              
-              // Float pattern 2 - diagonal drift
-              '@keyframes float2': {
-                '0%, 100%': { transform: 'translate(-50%, -50%)' },
-                '33%': { transform: 'translate(calc(-50% + 6px), calc(-50% - 8px))' },
-                '66%': { transform: 'translate(calc(-50% - 4px), calc(-50% - 4px))' },
-              },
-              
-              // Float pattern 3 - circular micro-orbit
-              '@keyframes float3': {
-                '0%': { transform: 'translate(-50%, -50%)' },
-                '25%': { transform: 'translate(calc(-50% + 5px), calc(-50% - 5px))' },
-                '50%': { transform: 'translate(-50%, calc(-50% - 8px))' },
-                '75%': { transform: 'translate(calc(-50% - 5px), calc(-50% - 5px))' },
-                '100%': { transform: 'translate(-50%, -50%)' },
-              },
-              
-              // Float pattern 4 - breathing scale
-              '@keyframes float4': {
-                '0%, 100%': { transform: 'translate(-50%, -50%) scale(1)' },
-                '50%': { transform: 'translate(-50%, calc(-50% - 6px)) scale(1.03)' },
-              },
-              
-              // Float pattern 5 - gentle sway
-              '@keyframes float5': {
-                '0%, 100%': { transform: 'translate(-50%, -50%)' },
-                '25%': { transform: 'translate(calc(-50% - 6px), calc(-50% - 3px))' },
-                '50%': { transform: 'translate(-50%, calc(-50% - 7px))' },
-                '75%': { transform: 'translate(calc(-50% + 6px), calc(-50% - 3px))' },
-              },
-              
-              // Glow pulse
-              '@keyframes glowPulse': {
-                '0%, 100%': { 
-                  boxShadow: `0 4px 20px ${alpha(theme.palette.text.primary, 0.1)}`,
-                  borderColor: alpha(techColor!, 0.3),
-                },
-                '50%': { 
-                  boxShadow: `0 6px 25px ${alpha(techColor!, 0.2)}, 0 0 15px ${alpha(techColor!, 0.1)}`,
-                  borderColor: alpha(techColor!, 0.5),
-                },
-              },
-              
-              '&:hover': {
-                transform: 'translate(-50%, -50%) scale(1.1)',
-                boxShadow: `0 8px 30px ${alpha(techColor!, 0.35)}, 0 0 20px ${alpha(techColor!, 0.2)}`,
-                borderColor: techColor,
-                zIndex: 10,
-              },
-            };
-          }}
-        >
-          <Typography
-            sx={(theme: Theme) => {
-              const isDark = theme.palette.mode === 'dark';
-              const techColor = tech.colorKey === 'dynamic' ? (isDark ? '#fff' : '#000') : tech.color;
-              return {
-                fontSize: { xs: '0.65rem', sm: '0.75rem', lg: '0.85rem' },
-                fontWeight: 600,
-                color: techColor,
-                whiteSpace: 'nowrap',
-              };
-            }}
-          >
-            {t(tech.labelKey)}
-          </Typography>
-        </Box>
+    <Box
+      sx={{
+        width: '100%',
+        overflow: 'hidden',
+        maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+      }}
+    >
+      {/* Row 1 - scrolls left */}
+      <MarqueeRow skills={row1} direction="left" duration={20} t={t} />
+      
+      {/* Row 2 - scrolls right */}
+      <MarqueeRow skills={row2} direction="right" duration={25} t={t} />
+      
+      {/* Row 3 - scrolls left (slower) */}
+      <MarqueeRow skills={row3} direction="left" duration={22} t={t} />
+    </Box>
+  );
+}
+
+interface MarqueeRowProps {
+  skills: Array<{ labelKey: string; color?: string; colorKey?: string }>;
+  direction: 'left' | 'right';
+  duration: number;
+  t: (key: string) => string;
+}
+
+function MarqueeRow({ skills, direction, duration, t }: MarqueeRowProps) {
+  // Duplicate skills for seamless loop
+  const duplicatedSkills = [...skills, ...skills];
+
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        gap: 1.5,
+        py: 1,
+        animation: `marquee${direction === 'left' ? 'Left' : 'Right'} ${duration}s linear infinite`,
+        '&:hover': {
+          animationPlayState: 'paused',
+        },
+        '@keyframes marqueeLeft': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        '@keyframes marqueeRight': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      }}
+    >
+      {duplicatedSkills.map((skill, index) => (
+        <SkillChip key={`${skill.labelKey}-${index}`} skill={skill} t={t} />
       ))}
-    </>
+    </Box>
+  );
+}
+
+interface SkillChipProps {
+  skill: { labelKey: string; color?: string; colorKey?: string };
+  t: (key: string) => string;
+}
+
+function SkillChip({ skill, t }: SkillChipProps) {
+  return (
+    <Box
+      sx={(theme: Theme) => {
+        const isDark = theme.palette.mode === 'dark';
+        const skillColor = skill.colorKey === 'dynamic' ? (isDark ? '#fff' : '#000') : skill.color;
+
+        return {
+          flexShrink: 0,
+          px: { xs: 1.5, sm: 2 },
+          py: { xs: 0.75, sm: 1 },
+          bgcolor: isDark ? alpha(theme.palette.background.paper, 0.9) : 'background.paper',
+          borderRadius: 2,
+          boxShadow: `0 2px 12px ${alpha(theme.palette.text.primary, 0.08)}`,
+          border: `1px solid ${alpha(skillColor!, 0.25)}`,
+          cursor: 'pointer',
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            transform: 'translateY(-4px) scale(1.05)',
+            boxShadow: `0 8px 24px ${alpha(skillColor!, 0.25)}, 0 0 12px ${alpha(skillColor!, 0.15)}`,
+            borderColor: alpha(skillColor!, 0.6),
+          },
+        };
+      }}
+    >
+      <Typography
+        sx={(theme: Theme) => {
+          const isDark = theme.palette.mode === 'dark';
+          const skillColor = skill.colorKey === 'dynamic' ? (isDark ? '#fff' : '#000') : skill.color;
+          return {
+            fontSize: { xs: '0.7rem', sm: '0.8rem' },
+            fontWeight: 600,
+            color: skillColor,
+            whiteSpace: 'nowrap',
+          };
+        }}
+      >
+        {t(skill.labelKey)}
+      </Typography>
+    </Box>
   );
 }

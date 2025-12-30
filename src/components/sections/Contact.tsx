@@ -36,16 +36,21 @@ export default function Contact() {
         >
           <Stack spacing={3}>
             <AnimatedElement variant="fadeInLeft" delay={0.08}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <EmailIcon sx={{ color: 'primary.main', fontSize: 24 }} />
-                <Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, minWidth: 0 }}>
+                <EmailIcon sx={{ color: 'primary.main', fontSize: 24, flexShrink: 0 }} />
+                <Box sx={{ minWidth: 0, overflow: 'hidden' }}>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 0.5 }}>
                     {t('email')}
                   </Typography>
                   <MuiLink
                     href={`mailto:${personalInfo.email}`}
                     underline="hover"
-                    sx={{ color: 'primary.main', fontWeight: 500 }}
+                    sx={{ 
+                      color: 'primary.main', 
+                      fontWeight: 500,
+                      wordBreak: 'break-all',
+                      display: 'block',
+                    }}
                   >
                     {personalInfo.email}
                   </MuiLink>
